@@ -1,0 +1,9 @@
+@use "./components" as *;
+@use "./layouts/MainLayout/mainLayout";
+@use "./assets/styles/base/base" as *;
+
+.testclass {
+  background-color: black;
+  width: 100vh;
+  height: 100vh;
+}
