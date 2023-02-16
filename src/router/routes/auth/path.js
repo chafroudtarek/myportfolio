@@ -4,6 +4,6 @@ export const PATH = {
   SIGNUP: "/signup",
   VERIFICATION: "/verification",
   FORGETPWD: "/forgetpassword",
-  RESETPWD: "/reset_password",
+  RESETPWD: "/resetpassword",
   ERROR: "*",
 };

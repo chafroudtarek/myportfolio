@@ -29,23 +29,23 @@
 }
 
 @mixin transition($property, $duration: 0.3s, $timing-function: ease) {
-    transition: $property $duration $timing-function;
-  }
+  transition: $property $duration $timing-function;
+}
 
-  @mixin media($query) {
-    @media #{$query} {
-      @content;
-    }
+@mixin media($query) {
+  @media only screen and (max-width: $query) {
+    @content;
   }
+}
 
 //   .my-element {
 //     font-size: 14px;
-    
+
 //     @include media(max-width: 767px) {
 //       font-size: 12px;
 //     }
 //   }
-  
+
 @mixin z($layer) {
   z-index: $layer;
 }

@@ -1,3 +1,4 @@
+@use "../../assets/styles/abstracts/mixins" as *;
 .formcontainer {
   form {
     display: flex;
@@ -60,7 +61,7 @@
       text-align: center;
       margin-top: 35px;
       p:first-child {
-        color: #374957;
+        color: #84898e;
         margin-bottom: 5px;
       }
       p:last-child {
@@ -86,6 +87,10 @@
     flex-direction: column;
     row-gap: 20px;
     width: 500px;
+    background-color: aqua;
+    @include media(500px) {
+      width: 100%;
+    }
   }
   .auth-button-container {
     margin: 30px auto 0;
@@ -93,6 +98,8 @@
     display: flex;
     gap: 10px;
     button {
+      padding: 10px;
+      font-size: 16px;
       width: 200px;
       background: #0c0c0c;
       border: 1px solid #d0d5dd;
@@ -105,75 +112,5 @@
         color: #000;
       }
     }
-  }
-}
-
-.verification__form {
-  &-footer {
-    margin-top: 30px;
-    p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      column-gap: 10px;
-      color: #937ff1;
-      margin-top: 20px;
-      font-size: 14px;
-      &:hover {
-        text-decoration: underline;
-      }
-      span {
-        cursor: pointer;
-      }
-    }
-  }
-  .form_verif_email {
-    & > div {
-      width: 100% !important;
-    }
-    .styles_react-code-input__CRulA {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      column-gap: 10px;
-      input {
-        width: 60px !important;
-        height: 60px !important;
-        border: 1px solid #dadada;
-        border-radius: 8px;
-        font-family: inherit;
-      }
-    }
-  }
-}
-
-.checkEmail-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @keyframes up-down {
-    0%,
-    100% {
-      transform: translateY(5px);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-  }
-
-  img {
-    max-height: 17.4rem;
-    -webkit-animation: up-down 5s infinite;
-    animation: up-down 5s infinite;
-  }
-
-  p {
-    padding-top: 10px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #00bfa6;
   }
 }

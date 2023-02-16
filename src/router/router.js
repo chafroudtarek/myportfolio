@@ -6,7 +6,7 @@ import LoadingScreen from "../components/Loading";
 //import AuthGuard from "./components/AuthGuard";
 //import GuestGuard from "./components/GuestGuard";
 //import SwitchGuard from "./components/SwitchGuard";
-import ttest from "./routes/test/test";
+import authRoutes from "./routes/auth/auth";
 
 export const renderRoutes = (routes = []) => (
   <Suspense fallback={<LoadingScreen />}>
@@ -41,13 +41,6 @@ export const renderRoutes = (routes = []) => (
 const routes = [
   {
     exact: true,
-    // layout: MainLayout,
-    //  guard: GuestGuard,
-    path: "/login",
-    component: lazy(() => import("../views/Login/Login")),
-  },
-  {
-    exact: true,
     // guard: SwitchGuard,
     path: "/switch",
     component: lazy(() => import("../views/Home")),
@@ -74,7 +67,7 @@ const routes = [
       },
     ],
   },
-  // ...ttest,
+  ...authRoutes,
 ];
 
 export default routes;

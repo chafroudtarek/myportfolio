@@ -16,7 +16,10 @@ const Login = () => {
       .required("Password is required"),
   });
   return (
-    <AuthLayout>
+    <AuthLayout
+      title="Log in"
+      description="Good to see you again! Please enter your username and password to log in."
+    >
       <div>
         <Formik
           initialValues={{
@@ -34,7 +37,7 @@ const Login = () => {
                     name="username"
                     type="text"
                     label="username or email"
-                    placeholder="enter your email"
+                    placeholder="enter your email or username"
                     reaquired={false}
                   />
                   <InputText
@@ -67,7 +70,7 @@ const Login = () => {
                 <div className="form-footer">
                   <p>Dont have an account?</p>
                   <p>
-                    <NavLink to="/home">Create an account</NavLink>
+                    <NavLink to="/signup">Create an account</NavLink>
                   </p>
                 </div>
               </Form>

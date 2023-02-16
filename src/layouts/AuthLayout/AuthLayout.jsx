@@ -8,15 +8,12 @@ function AuthLayout({ children, title, description }) {
       <div className="authlayout__content">
         <div className="authlayout__content-section-one">
           <div className="authlayout__content-section-one--logo">
-            <img src={logo}  height={500} />
+            <img src={logo} height={500} />
           </div>
 
           <div className="authlayout__content-section-one--description">
-            <p>Welcome!</p>
-            <p>
-              To stay in touch with us, please log in with your personal
-              information.
-            </p>
+            <p>Welcome</p>
+            <p>{description}</p>
           </div>
         </div>
         <div className="authlayout__content-section-two">

@@ -1,3 +1,4 @@
+@use "../../assets/styles/abstracts/mixins" as *;
 .authlayout {
   display: flex;
   justify-content: center;
@@ -38,6 +39,9 @@
         img {
           opacity: 0.5;
         }
+      }
+      @include media(900px) {
+        display: none;
       }
     }
     &-section-two {
