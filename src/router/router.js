@@ -41,10 +41,10 @@ export const renderRoutes = (routes = []) => (
 const routes = [
   {
     exact: true,
-    layout: MainLayout,
+    // layout: MainLayout,
     //  guard: GuestGuard,
     path: "/login",
-    component: lazy(() => import("../views/Home")),
+    component: lazy(() => import("../views/Login/Login")),
   },
   {
     exact: true,
@@ -74,7 +74,7 @@ const routes = [
       },
     ],
   },
-  ...ttest,
+  // ...ttest,
 ];
 
 export default routes;

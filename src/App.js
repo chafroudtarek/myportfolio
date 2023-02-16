@@ -4,12 +4,7 @@ import { renderRoutes } from "./router/router";
 import routes from "./router/router";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <MainLayout />
-      {/* {renderRoutes(routes)} */}
-    </BrowserRouter>
-  );
+  return <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>;
 }
 
 export default App;
