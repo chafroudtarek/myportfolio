@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-import Sidebar from "../../components/Header/Header";
-import Header from "../../components/Sidebar/Sidebar";
+import Header from "../../components/Header/Header";
+import Sidebar from "../../components/Sidebar/Sidebar";
 const MainLayout = () => {
   return (
     // <AuthGuard>
@@ -10,7 +10,7 @@ const MainLayout = () => {
       <div className="main_layout__container">
         <Header />
         <div>hi</div>
-        {/* <Outlet /> */}
+        <Outlet />
       </div>
     </div>
     // </AuthGuard>

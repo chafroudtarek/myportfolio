@@ -1,5 +1,6 @@
 .main_layout {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
   µ & > .main_layout__container {
     display: flex;
     flex-direction: column;
