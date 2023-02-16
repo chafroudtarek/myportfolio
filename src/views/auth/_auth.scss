@@ -87,7 +87,7 @@
     flex-direction: column;
     row-gap: 20px;
     width: 500px;
-    background-color: aqua;
+
     @include media(500px) {
       width: 100%;
     }
