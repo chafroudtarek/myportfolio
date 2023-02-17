@@ -13,7 +13,7 @@ import { toast } from "react-toastify";
 const Login = () => {
   const { jwt } = useAuth({})
   const schema = Yup.object().shape({
-    username: Yup.string().required("Email is required"),
+    email: Yup.string().email().required("Email is required"),
     password: Yup.string()
       .min(1, "Password must be at least 6 charaters")
       .required("Password is required"),
@@ -26,13 +26,12 @@ const Login = () => {
       <div>
         <Formik
           initialValues={{
-            username: "",
+            email: "",
             password: "",
           }}
           validationSchema={schema}
           onSubmit={(values) => {
-            jwt.login({email: "chafroudtarek666@gmail.com",
-            password:"tarek123"}).then(()=> {
+            jwt.login(values).then(()=> {
               toast.success('Login successfully',{ autoClose: 500 })
             }).catch((e)=> { console.log('error here',e)
             toast.error(e.response.data.message,{ autoClose: 500 })})
@@ -44,10 +43,10 @@ const Login = () => {
               <Form>
                 <div className="input-column-auth">
                   <InputText
-                    name="username"
+                    name="email"
                     type="text"
-                    label="username or email"
-                    placeholder="enter your email or username"
+                    label=" email"
+                    placeholder="enter your email "
                     reaquired={false}
                   />
                   <InputText

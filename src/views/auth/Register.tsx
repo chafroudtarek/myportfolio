@@ -7,10 +7,13 @@ import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import Button from "../../components/Button/Button";
+import useAuth from "../../core/auth/useAuth";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const { jwt } = useAuth({})
   const schema = Yup.object().shape({
-    name: Yup.string()
+    username: Yup.string()
       .trim()
       .min(3, "at least 6 characters")
       .required("name is required"),
@@ -34,14 +37,20 @@ const Login = () => {
       <div>
         <Formik
           initialValues={{
-            name: "",
+            username: "",
             email: "",
             password: "",
             confirm_password: "",
           }}
-          validationSchema={schema}
+          // validationSchema={schema}
           onSubmit={(values) => {
-            console.log("values Signup", values);
+            const {confirm_password, ...rest} = values
+          
+            jwt.register(rest).then(()=> {
+              toast.success('register successfully',{ autoClose: 500 })
+            }).catch((e)=> { console.log('error here',e)
+            toast.error(e.response.data.message,{ autoClose: 500 })})
+           
           }}
         >
           {(formik :any ) => (
@@ -49,9 +58,9 @@ const Login = () => {
               <Form>
                 <div className="input-column-auth">
                   <InputText
-                    name="name"
+                    name="username"
                     type="text"
-                    label="username or email"
+                    label="username"
                     placeholder="enter your username "
                     reaquired={false}
                   />
