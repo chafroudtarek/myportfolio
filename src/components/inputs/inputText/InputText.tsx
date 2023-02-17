@@ -1,7 +1,8 @@
 import React from "react";
 import { ErrorMessage, useField } from "formik";
+import { inputText } from "../types";
 
-const InputText = ({ name, label, placeholder, reaquired, ...props }) => {
+const InputText = ({ name, label, placeholder, reaquired, ...props }:inputText) => {
   const [field, meta] = useField(name);
   return (
     <div className="input">

@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { ReactComponent as HomeIcon } from "../../assets/icons/home.svg";
+import { navigation } from "../inputs/types";
 
-const NavigationLink = ({ icon = null, route = "/", children }) => {
+const NavigationLink = ({ icon = null, route = "/", children }:navigation) => {
   return (
     <NavLink
       to={route}

@@ -22,6 +22,11 @@ const authRoutes = [
     path: PATH.RESETPWD,
     component: lazy(() => import("../../../views/auth/ResetPassword")),
   },
+  {
+    path: "*",
+    component: lazy(() => import("../../../views/auth/Login")),
+  },
+  
 ];
 
 export default authRoutes;

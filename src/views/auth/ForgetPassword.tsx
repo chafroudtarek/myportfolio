@@ -2,11 +2,10 @@ import React from "react";
 import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
 import { NavLink } from "react-router-dom";
 
-import { PATH } from "../../router/path";
 import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
-import Button from "components/Button/Button";
+import Button from "../../components/Button/Button";
 
 const ForgetPassword = () => {
   const schema = Yup.object().shape({
@@ -25,7 +24,7 @@ const ForgetPassword = () => {
           validationSchema={schema}
           onSubmit={() => {}}
         >
-          {({ formik }) => (
+          {({ formik }:any) => (
             <div className="formcontainer">
               <Form>
                 <div className="input-column-auth">
@@ -44,7 +43,7 @@ const ForgetPassword = () => {
                     name="confirm"
                     //loading={loading}
                     type="submit"
-                    classname="btn__confirm"
+                    className="btn__confirm"
                     // action={}
                   />
                 </div>

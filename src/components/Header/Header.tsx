@@ -10,7 +10,7 @@ const Header = () => {
         </div>
 
         <div className="header__group">
-          <div class="search-box">
+          <div className="search-box">
             <input type="text" placeholder="Search..." />
           </div>
         </div>

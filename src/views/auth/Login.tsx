@@ -2,13 +2,16 @@ import React from "react";
 import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
 import { NavLink } from "react-router-dom";
 
-import { PATH } from "../../router/path";
+
 import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
-import Button from "components/Button/Button";
+import Button from "../../components/Button/Button";
+import useAuth from "../../core/auth/useAuth";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const { jwt } = useAuth({})
   const schema = Yup.object().shape({
     username: Yup.string().required("Email is required"),
     password: Yup.string()
@@ -27,9 +30,16 @@ const Login = () => {
             password: "",
           }}
           validationSchema={schema}
-          onSubmit={() => {}}
+          onSubmit={(values) => {
+            jwt.login({email: "chafroudtarek666@gmail.com",
+            password:"tarek123"}).then(()=> {
+              toast.success('Login successfully',{ autoClose: 500 })
+            }).catch((e)=> { console.log('error here',e)
+            toast.error(e.response.data.message,{ autoClose: 500 })})
+           
+          }}
         >
-          {({ formik }) => (
+          {(formik :any) => (
             <div className="formcontainer">
               <Form>
                 <div className="input-column-auth">
@@ -63,7 +73,7 @@ const Login = () => {
                     name="confirm"
                     //loading={loading}
                     type="submit"
-                    classname="btn__confirm"
+                    className="btn__confirm"
                     // action={}
                   />
                 </div>

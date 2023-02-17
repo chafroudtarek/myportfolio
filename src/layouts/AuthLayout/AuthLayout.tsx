@@ -1,14 +1,14 @@
 import React from "react";
 
-import logo from "../../assets/icons/logo-white.png";
+import Logo from "../../assets/icons/logo-white.png";
 
-function AuthLayout({ children, title, description }) {
+function AuthLayout({ children, title, description }:any) {
   return (
     <div className="authlayout">
       <div className="authlayout__content">
         <div className="authlayout__content-section-one">
           <div className="authlayout__content-section-one--logo">
-            <img src={logo} height={500} />
+            <img src={Logo} alt='logo' height={500} />
           </div>
 
           <div className="authlayout__content-section-one--description">

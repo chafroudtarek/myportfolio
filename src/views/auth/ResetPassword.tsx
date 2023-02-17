@@ -1,12 +1,10 @@
 import React from "react";
 import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
-import { NavLink } from "react-router-dom";
 
-import { PATH } from "../../router/path";
 import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
-import Button from "components/Button/Button";
+import Button from "../../components/Button/Button";
 
 const ResetPassword = () => {
   const schema = Yup.object().shape({
@@ -18,7 +16,7 @@ const ResetPassword = () => {
       )
       .required("Password is required"),
     confirm_password: Yup.string()
-      .oneOf([Yup.ref("password"), null], "Password must match")
+      .oneOf([Yup.ref("password")], "Password must match")
       .required("Confirm password is required"),
   });
   return (
@@ -33,9 +31,11 @@ const ResetPassword = () => {
             confirm_password: "",
           }}
           validationSchema={schema}
-          onSubmit={() => {}}
+          onSubmit={(values) => {
+            console.log("values reset password", values);
+          }}
         >
-          {({ formik }) => (
+          {( formik :any) => (
             <div className="formcontainer">
               <Form>
                 <div className="input-column-auth">
@@ -61,7 +61,7 @@ const ResetPassword = () => {
                     name="confirm"
                     //loading={loading}
                     type="submit"
-                    classname="btn__confirm"
+                    className="btn__confirm"
                     // action={}
                   />
                 </div>

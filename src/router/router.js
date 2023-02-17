@@ -2,8 +2,7 @@ import React, { Suspense, Fragment, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 //import DashboardLayout from "./layouts/DashboardLayout";
-import LoadingScreen from "../components/Loading";
-//import AuthGuard from "./components/AuthGuard";
+import LoadingScreen from "../components/Loading/Loading";
 //import GuestGuard from "./components/GuestGuard";
 //import SwitchGuard from "./components/SwitchGuard";
 import authRoutes from "./routes/auth/auth";
@@ -39,6 +38,7 @@ export const renderRoutes = (routes = []) => (
 );
 
 const routes = [
+  ...authRoutes,
   {
     exact: true,
     // guard: SwitchGuard,
@@ -48,12 +48,12 @@ const routes = [
   {
     path: "/",
     // guard: AuthGuard,
-    // layout: DashboardLayout,
+    layout: MainLayout,
     component: lazy(() => import("../views/Home")),
     routes: [
       {
         exact: true,
-        path: "/",
+        path: "/home",
         component: lazy(() => import("../views/Home")),
       },
       {
@@ -61,13 +61,8 @@ const routes = [
         path: "/magazine",
         component: lazy(() => import("../views/Home")),
       },
-      {
-        path: "*",
-        component: lazy(() => import("../views/Home")),
-      },
     ],
   },
-  ...authRoutes,
 ];
 
 export default routes;

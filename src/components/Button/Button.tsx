@@ -1,6 +1,7 @@
 import React from "react";
 import { LoadingButton } from "@mui/lab";
-const Button = ({ label, name, type, loading, classname, style, action }) => {
+import { button } from "../types";
+const Button = ({ label, name, type, loading, className, style, action }:button) => {
   return (
     <LoadingButton
       type="submit"
