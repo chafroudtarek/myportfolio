@@ -1,7 +1,7 @@
 import authService from "./authService";
 
-export default function useAuth(jwtOverrideConfig: any) {
-  const jwt = new authService(jwtOverrideConfig);
+export default function useAuth() {
+  const jwt = new authService();
 
   return {
     jwt,

@@ -6,8 +6,11 @@ import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import Button from "../../components/Button/Button";
+import useAuth from "../../core/auth/useAuth";
+import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
+  const { jwt } = useAuth()
   const schema = Yup.object().shape({
     email: Yup.string().email("Email is invalid").required("Email is required"),
   });
@@ -22,7 +25,12 @@ const ForgetPassword = () => {
             email: "",
           }}
           validationSchema={schema}
-          onSubmit={() => {}}
+          onSubmit={(values) => {
+            jwt.forgetPassword(values).then(() => {  
+              toast.success('email sent successfully',{ autoClose: 500 })
+          }).catch((e)=> { console.log('error here',e)
+          toast.error(e.response.data.message,{ autoClose: 500 })})
+          }}
         >
           {({ formik }:any) => (
             <div className="formcontainer">

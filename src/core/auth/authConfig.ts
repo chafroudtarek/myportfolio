@@ -11,8 +11,11 @@ export interface configType {
 const config = {
   loginEndpoint: "/auth/login",
   registerEndpoint: "/auth/signup",
-  refreshEndpoint: "/auth/refresh-token",
+  refreshEndpoint: "/auth/refresh",
   logoutEndpoint: "/auth/logout",
+  getMeEndpoint: "/auth/getLoggenInUser",
+  resetEndpoint: "/auth/resetPassword",
+  forgetEndpoint: "/auth/forgetPassword",
   storageRefreshTokenKeyName: "",
   //Bearer
   tokenType: "Bearer",

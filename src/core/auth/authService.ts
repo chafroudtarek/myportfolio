@@ -1,14 +1,13 @@
 import appAxios from "../../helpers/axios";
 import authDefaultConfig from "./authConfig";
+import { loginEndPoint, registerEndPoint } from "./types";
 
 export default class JwtService {
   authConfig = { ...authDefaultConfig };
 
   isAlreadyFetchingAccessToken = false;
 
-  constructor(jwtOverrideConfig: object) {
-    this.authConfig = { ...this.authConfig, ...jwtOverrideConfig };
-
+  constructor() {
     appAxios.interceptors.request.use(
       (config) => {
         const accessToken = this.getToken();
@@ -84,12 +83,23 @@ export default class JwtService {
     localStorage.setItem(this.authConfig.storageRefreshTokenKeyName, value);
   }
 
-  login(...args: any) {
-    return appAxios.post(this.authConfig.loginEndpoint, ...args);
+  login(body: loginEndPoint) {
+    return appAxios.post(this.authConfig.loginEndpoint, body);
   }
 
-  register(...args: any) {
-    return appAxios.post(this.authConfig.registerEndpoint, ...args);
+  register(body: registerEndPoint) {
+    return appAxios.post(this.authConfig.registerEndpoint, body);
+  }
+
+  getMe() {
+    return appAxios.get(this.authConfig.getMeEndpoint);
+  }
+
+  resetPassword(password: object, token: string | null = "") {
+    return appAxios.post(`${this.authConfig.resetEndpoint}/${token}`, password);
+  }
+  forgetPassword(email: object) {
+    return appAxios.post(this.authConfig.forgetEndpoint, email);
   }
 
   refreshToken() {

@@ -9,9 +9,10 @@ import { Form, Formik } from "formik";
 import Button from "../../components/Button/Button";
 import useAuth from "../../core/auth/useAuth";
 import { toast } from "react-toastify";
+import { PATH } from "../../router/routes/auth/path";
 
 const Login = () => {
-  const { jwt } = useAuth({})
+  const { jwt } = useAuth()
   const schema = Yup.object().shape({
     email: Yup.string().email().required("Email is required"),
     password: Yup.string()
@@ -63,7 +64,7 @@ const Login = () => {
                     <label>Remeber me</label>
                   </div>
                   <span className="forget-password ">
-                    <NavLink to="/forgetpassword">forget password ?</NavLink>
+                    <NavLink to={PATH.FORGETPWD}>forget password ?</NavLink>
                   </span>
                 </div>
                 <div className="auth-button-container">
@@ -79,7 +80,7 @@ const Login = () => {
                 <div className="form-footer">
                   <p>Dont have an account?</p>
                   <p>
-                    <NavLink to="/signup">Create an account</NavLink>
+                    <NavLink to={PATH.SIGNUP}>Create an account</NavLink>
                   </p>
                 </div>
               </Form>

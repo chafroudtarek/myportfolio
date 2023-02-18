@@ -2,7 +2,7 @@ import React from "react";
 import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
 import { NavLink } from "react-router-dom";
 
-import { PATH } from "../../router/path";
+import { PATH } from "../../router/routes/auth/path";
 import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
@@ -11,7 +11,7 @@ import useAuth from "../../core/auth/useAuth";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { jwt } = useAuth({})
+  const { jwt } = useAuth()
   const schema = Yup.object().shape({
     username: Yup.string()
       .trim()
@@ -42,7 +42,7 @@ const Login = () => {
             password: "",
             confirm_password: "",
           }}
-          // validationSchema={schema}
+          validationSchema={schema}
           onSubmit={(values) => {
             const {confirm_password, ...rest} = values
           
@@ -100,7 +100,7 @@ const Login = () => {
                 <div className="form-footer">
                   <p>You have an account?</p>
                   <p>
-                    <NavLink to="/login">Login now</NavLink>
+                    <NavLink to={PATH.LOGIN}>Login now</NavLink>
                   </p>
                 </div>
               </Form>

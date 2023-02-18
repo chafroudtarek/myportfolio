@@ -5,8 +5,15 @@ import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import Button from "../../components/Button/Button";
+import useAuth from "../../core/auth/useAuth";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import { PATH } from "../../router/routes/auth/path";
 
 const ResetPassword = () => {
+  const navigate = useNavigate()
+  const [params] = useSearchParams()
+  const { jwt } = useAuth();
   const schema = Yup.object().shape({
     password: Yup.string()
       .min(8, "Password must be at least 6 charaters")
@@ -32,7 +39,13 @@ const ResetPassword = () => {
           }}
           validationSchema={schema}
           onSubmit={(values) => {
-            console.log("values reset password", values);
+          const {confirm_password,...validPassword}  = values
+          const token = params.get("token"); 
+          jwt.resetPassword(validPassword, token).then(()=> {
+            toast.success('reset password successfully',{ autoClose: 500 })
+            navigate(PATH.LOGIN)
+          }).catch((e)=> { console.log('error here',e)
+          toast.error(e.response.data.message,{ autoClose: 500 })})
           }}
         >
           {( formik :any) => (

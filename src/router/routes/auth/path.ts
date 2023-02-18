@@ -3,7 +3,7 @@ export const PATH = {
   LOGIN: "/login",
   SIGNUP: "/signup",
   VERIFICATION: "/verification",
-  FORGETPWD: "/forgetpassword",
-  RESETPWD: "/resetpassword",
+  FORGETPWD: "/forgetPassword",
+  RESETPWD: "/resetPassword",
   ERROR: "*",
 };
