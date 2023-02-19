@@ -1,6 +1,6 @@
 import React from "react";
 import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 import InputText from "../../components/inputs/inputText/InputText";
@@ -9,10 +9,11 @@ import { Form, Formik } from "formik";
 import Button from "../../components/Button/Button";
 import useAuth from "../../core/auth/useAuth";
 import { toast } from "react-toastify";
-import { PATH } from "../../router/routes/auth/path";
+import { AUTHPATH } from "../../router/routes/auth/path";
 
 const Login = () => {
   const { jwt } = useAuth()
+  const navigate = useNavigate()
   const schema = Yup.object().shape({
     email: Yup.string().email().required("Email is required"),
     password: Yup.string()
@@ -32,8 +33,17 @@ const Login = () => {
           }}
           validationSchema={schema}
           onSubmit={(values) => {
-            jwt.login(values).then(()=> {
-              toast.success('Login successfully',{ autoClose: 500 })
+            jwt.login(values).then((r)=> {
+              jwt.setToken(r.data.data.tokens.accessToken)
+              toast.success("Login successfully", {
+                autoClose: 200,
+                onOpen: () => {
+                  setTimeout(() => {
+                    navigate("/home");
+                  }, 300);
+                },
+              });
+              
             }).catch((e)=> { console.log('error here',e)
             toast.error(e.response.data.message,{ autoClose: 500 })})
            
@@ -64,7 +74,7 @@ const Login = () => {
                     <label>Remeber me</label>
                   </div>
                   <span className="forget-password ">
-                    <NavLink to={PATH.FORGETPWD}>forget password ?</NavLink>
+                    <NavLink to={ AUTHPATH.FORGETPWD}>forget password ?</NavLink>
                   </span>
                 </div>
                 <div className="auth-button-container">
@@ -74,13 +84,13 @@ const Login = () => {
                     //loading={loading}
                     type="submit"
                     className="btn__confirm"
-                    // action={}
+                 
                   />
                 </div>
                 <div className="form-footer">
                   <p>Dont have an account?</p>
                   <p>
-                    <NavLink to={PATH.SIGNUP}>Create an account</NavLink>
+                    <NavLink to={ AUTHPATH.SIGNUP}>Create an account</NavLink>
                   </p>
                 </div>
               </Form>

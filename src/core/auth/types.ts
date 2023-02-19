@@ -9,3 +9,8 @@ export interface registerEndPoint {
     password: string;
     username:string;
 }
+export interface MyToken {
+    name: string;
+    exp: number;
+   
+  }

@@ -2,7 +2,7 @@ import React from "react";
 import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
 import { NavLink } from "react-router-dom";
 
-import { PATH } from "../../router/routes/auth/path";
+import { AUTHPATH } from "../../router/routes/auth/path";
 import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
@@ -94,13 +94,13 @@ const Login = () => {
                     //loading={loading}
                     type="submit"
                     className="btn__confirm"
-                    // action={}
+                   
                   />
                 </div>
                 <div className="form-footer">
                   <p>You have an account?</p>
                   <p>
-                    <NavLink to={PATH.LOGIN}>Login now</NavLink>
+                    <NavLink to={AUTHPATH.LOGIN}>Login now</NavLink>
                   </p>
                 </div>
               </Form>

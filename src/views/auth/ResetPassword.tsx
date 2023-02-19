@@ -8,7 +8,7 @@ import Button from "../../components/Button/Button";
 import useAuth from "../../core/auth/useAuth";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { PATH } from "../../router/routes/auth/path";
+import { AUTHPATH } from "../../router/routes/auth/path";
 
 const ResetPassword = () => {
   const navigate = useNavigate()
@@ -43,7 +43,7 @@ const ResetPassword = () => {
           const token = params.get("token"); 
           jwt.resetPassword(validPassword, token).then(()=> {
             toast.success('reset password successfully',{ autoClose: 500 })
-            navigate(PATH.LOGIN)
+            navigate(AUTHPATH.LOGIN)
           }).catch((e)=> { console.log('error here',e)
           toast.error(e.response.data.message,{ autoClose: 500 })})
           }}
@@ -75,7 +75,7 @@ const ResetPassword = () => {
                     //loading={loading}
                     type="submit"
                     className="btn__confirm"
-                    // action={}
+                   
                   />
                 </div>
               </Form>

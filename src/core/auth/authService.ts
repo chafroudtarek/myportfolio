@@ -1,7 +1,7 @@
 import appAxios from "../../helpers/axios";
 import authDefaultConfig from "./authConfig";
-import { loginEndPoint, registerEndPoint } from "./types";
-
+import { loginEndPoint, MyToken, registerEndPoint } from "./types";
+import jwtDecode, { JwtPayload } from "jwt-decode";
 export default class JwtService {
   authConfig = { ...authDefaultConfig };
 
@@ -20,29 +20,19 @@ export default class JwtService {
       (error) => Promise.reject(error)
     );
 
-    /**a remove */
-    // appAxios.interceptors.response.use(
-    //   (response) => response,
-    //   (error) => {
-    //     const { config, response } = error;
-
-    //     if (response && response.status === 401) {
-    //       if (!this.isAlreadyFetchingAccessToken) {
-    //         this.isAlreadyFetchingAccessToken = true;
-    //         this.refreshToken().then((r) => {
-    //           this.isAlreadyFetchingAccessToken = false;
-
-    //           this.setToken(r.data.accessToken);
-    //           //** on the cookies */
-    //           this.setRefreshToken(r.data.refreshToken);
-
-    //           // this.onAccessTokenFetched(r.data.accessToken);
-    //         });
-    //       }
-    //     }
-    //     return Promise.reject(error);
-    //   }
-    // );
+    appAxios.interceptors.response.use(
+      (response) => response,
+      (error) => {
+        if (error.response.status === 401) {
+          localStorage.removeItem("token");
+          window.location.href = "/";
+        } else {
+          Promise.reject(
+            (error.response && error.response.data) || "Something went wrong"
+          );
+        }
+      }
+    );
     appAxios.interceptors.response.use(
       (response) => response,
       async (error) => {
@@ -56,8 +46,6 @@ export default class JwtService {
             this.setToken(r.data.accessToken);
 
             this.setRefreshToken(r.data.refreshToken);
-
-            // this.onAccessTokenFetched(r.data.accessToken);
           });
 
           return appAxios(originalRequest);
@@ -70,7 +58,16 @@ export default class JwtService {
   getToken() {
     return localStorage.getItem(this.authConfig.storageTokenKeyName);
   }
+  isValidToken(token: string) {
+    if (!token) {
+      return false;
+    }
 
+    const decoded = jwtDecode<MyToken>(token);
+    const currentTime = Date.now() / 1000;
+
+    return decoded.exp > currentTime;
+  }
   getRefreshToken() {
     return localStorage.getItem(this.authConfig.storageRefreshTokenKeyName);
   }

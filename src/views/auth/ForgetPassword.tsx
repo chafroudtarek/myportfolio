@@ -8,6 +8,7 @@ import { Form, Formik } from "formik";
 import Button from "../../components/Button/Button";
 import useAuth from "../../core/auth/useAuth";
 import { toast } from "react-toastify";
+import { AUTHPATH } from "../../router/routes/auth/path";
 
 const ForgetPassword = () => {
   const { jwt } = useAuth()
@@ -52,13 +53,13 @@ const ForgetPassword = () => {
                     //loading={loading}
                     type="submit"
                     className="btn__confirm"
-                    // action={}
+               
                   />
                 </div>
                 <div className="form-footer">
                   <p>Go back ?</p>
                   <p>
-                    <NavLink to="/login">Login</NavLink>
+                    <NavLink to={ AUTHPATH.LOGIN}>Login</NavLink>
                   </p>
                 </div>
               </Form>

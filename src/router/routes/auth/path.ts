@@ -1,4 +1,4 @@
-export const PATH = {
+export const AUTHPATH = {
   HOME: "/homeTEST",
   LOGIN: "/login",
   SIGNUP: "/signup",
