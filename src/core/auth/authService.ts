@@ -65,8 +65,8 @@ export default class JwtService {
 
     const decoded = jwtDecode<MyToken>(token);
     const currentTime = Date.now() / 1000;
-
-    return decoded.exp > currentTime;
+    const user = this.getMe();
+    return decoded.exp > currentTime && user;
   }
   getRefreshToken() {
     return localStorage.getItem(this.authConfig.storageRefreshTokenKeyName);

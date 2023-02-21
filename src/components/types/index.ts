@@ -7,3 +7,8 @@ export interface button {
   style?: React.CSSProperties;
   action?: () => void;
 }
+
+export interface roomCard {
+  title: string;
+  image: string;
+}

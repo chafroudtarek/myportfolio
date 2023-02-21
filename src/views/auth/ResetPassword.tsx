@@ -4,15 +4,15 @@ import AuthLayout from "../../layouts/AuthLayout/AuthLayout";
 import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
-import Button from "../../components/Button/Button";
+import Button from "../../components/button/Button";
 import useAuth from "../../core/auth/useAuth";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AUTHPATH } from "../../router/routes/auth/path";
 
 const ResetPassword = () => {
-  const navigate = useNavigate()
-  const [params] = useSearchParams()
+  const navigate = useNavigate();
+  const [params] = useSearchParams();
   const { jwt } = useAuth();
   const schema = Yup.object().shape({
     password: Yup.string()
@@ -39,16 +39,23 @@ const ResetPassword = () => {
           }}
           validationSchema={schema}
           onSubmit={(values) => {
-          const {confirm_password,...validPassword}  = values
-          const token = params.get("token"); 
-          jwt.resetPassword(validPassword, token).then(()=> {
-            toast.success('reset password successfully',{ autoClose: 500 })
-            navigate(AUTHPATH.LOGIN)
-          }).catch((e)=> { console.log('error here',e)
-          toast.error(e.response.data.message,{ autoClose: 500 })})
+            const { confirm_password, ...validPassword } = values;
+            const token = params.get("token");
+            jwt
+              .resetPassword(validPassword, token)
+              .then(() => {
+                toast.success("reset password successfully", {
+                  autoClose: 500,
+                });
+                navigate(AUTHPATH.LOGIN);
+              })
+              .catch((e) => {
+                console.log("error here", e);
+                toast.error(e.response.data.message, { autoClose: 500 });
+              });
           }}
         >
-          {( formik :any) => (
+          {(formik: any) => (
             <div className="formcontainer">
               <Form>
                 <div className="input-column-auth">
@@ -75,7 +82,6 @@ const ResetPassword = () => {
                     //loading={loading}
                     type="submit"
                     className="btn__confirm"
-                   
                   />
                 </div>
               </Form>

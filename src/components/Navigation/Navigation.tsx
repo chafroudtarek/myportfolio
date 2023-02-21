@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { ReactComponent as HomeIcon } from "../../assets/icons/home.svg";
 import { navigation } from "../inputs/types";
 
-const NavigationLink = ({ icon = null, route = "/", children }:navigation) => {
+const NavigationLink = ({ icon = null, route = "/", children }: navigation) => {
   return (
     <NavLink
       to={route}
@@ -18,11 +18,11 @@ const NavigationLink = ({ icon = null, route = "/", children }:navigation) => {
 const Navigation = () => {
   return (
     <div className="navigation__container">
-      <NavigationLink route="/" icon={<HomeIcon />}>
+      <NavigationLink route="/home" icon={<HomeIcon />}>
         Home
       </NavigationLink>
-      <NavigationLink route="/login" icon={<HomeIcon />}>
-        Test
+      <NavigationLink route="/Chat" icon={<HomeIcon />}>
+        Chat
       </NavigationLink>
     </div>
   );

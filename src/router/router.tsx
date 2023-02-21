@@ -5,13 +5,13 @@ import LoadingScreen from "../components/Loading/Loading";
 import AuthGuard from "../guards/AuthGuard";
 import authRoutes from "./routes/auth/auth";
 
-export const renderRoutes = (routes = []) => (
+const RenderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
     <Routes>
-      {routes.map((route, i) => {
+      {routes.map((route: any, i: number) => {
         const Guard = route?.guard ? route.guard : Fragment;
         const Layout = route.layout ? route.layout : Fragment;
-        const Component = route.component;
+        const Component = route.component ? route.component : Fragment;
 
         return (
           <Route
@@ -26,7 +26,7 @@ export const renderRoutes = (routes = []) => (
             }
           >
             {route.routes?.length > 0 &&
-              route.routes.map((subRoute, j) => {
+              route.routes.map((subRoute: any, j: number) => {
                 const Component = subRoute.component;
                 return (
                   <Route path={subRoute.path} element={<Component />} key={j} />
@@ -39,28 +39,23 @@ export const renderRoutes = (routes = []) => (
   </Suspense>
 );
 
-const routes = [
+export default RenderRoutes;
+
+export const routes = [
   ...authRoutes,
-
   {
-    path: "/home",
-    guard: AuthGuard,
-    layout: MainLayout,
-    component: lazy(() => import("../views/Home")),
-    //   // routes: [
-    //   //   {
-
-    //   //     exact: true,
-    //   //     path: "/home",
-    //   //     component: lazy(() => import("../views/Home")),
-    //   //   },
-    //   //   {
-    //   //     exact: true,
-    //   //     path: "/magazine",
-    //   //     component: lazy(() => import("../views/Home")),
-    //   //   },
-    //   // ],
+   path: "/",
+   guard: AuthGuard,
+   layout: MainLayout,
+    routes: [
+      {
+        path: "/home",
+        component: lazy(() => import("../views/Home")),
+      },
+      {
+        path: "/chat",
+        component: lazy(() => import("../views/chat/Chat")),
+      },
+    ],
   },
 ];
-
-export default routes;

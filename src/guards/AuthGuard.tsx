@@ -2,13 +2,14 @@ import React from "react";
 import useAuth from "../core/auth/useAuth";
 import { Navigate } from "react-router-dom";
 
-const AuthGuard = ({ children }) => {
+type AuthGuardProps = { children: React.ReactNode };
+
+const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
   const { jwt } = useAuth();
   const token = jwt.getToken();
-  const isAuthenticated = jwt.isValidToken(token);
-  const user = jwt.getMe();
+  const isAuthenticated = jwt.isValidToken(token ? token : "");
 
-  if (isAuthenticated && user) {
+  if (isAuthenticated) {
     return <>{children}</>;
   }
 

@@ -1,14 +1,21 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import logger from "redux-logger";
-
-const middleware = [
-  ...getDefaultMiddleware({ serializableCheck: false }),
-  logger,
-];
+import appAxios from "../helpers/axios";
+import chats from "./chat/chatSlice";
 
 const store = configureStore({
-  reducer: {},
-  middleware,
+  reducer: {
+    chats,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      thunk: {
+        extraArgument: appAxios,
+      },
+      serializableCheck: false,
+      logger,
+    }),
+
   devTools: process.env.REACT_APP_BASE_NODE_ENV !== "production",
 });
 

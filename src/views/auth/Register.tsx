@@ -6,12 +6,12 @@ import { AUTHPATH } from "../../router/routes/auth/path";
 import InputText from "../../components/inputs/inputText/InputText";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
-import Button from "../../components/Button/Button";
+import Button from "../../components/button/Button";
 import useAuth from "../../core/auth/useAuth";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { jwt } = useAuth()
+  const { jwt } = useAuth();
   const schema = Yup.object().shape({
     username: Yup.string()
       .trim()
@@ -44,16 +44,20 @@ const Login = () => {
           }}
           validationSchema={schema}
           onSubmit={(values) => {
-            const {confirm_password, ...rest} = values
-          
-            jwt.register(rest).then(()=> {
-              toast.success('register successfully',{ autoClose: 500 })
-            }).catch((e)=> { console.log('error here',e)
-            toast.error(e.response.data.message,{ autoClose: 500 })})
-           
+            const { confirm_password, ...rest } = values;
+
+            jwt
+              .register(rest)
+              .then(() => {
+                toast.success("register successfully", { autoClose: 500 });
+              })
+              .catch((e) => {
+                console.log("error here", e);
+                toast.error(e.response.data.message, { autoClose: 500 });
+              });
           }}
         >
-          {(formik :any ) => (
+          {(formik: any) => (
             <div className="formcontainer">
               <Form>
                 <div className="input-column-auth">
@@ -94,7 +98,6 @@ const Login = () => {
                     //loading={loading}
                     type="submit"
                     className="btn__confirm"
-                   
                   />
                 </div>
                 <div className="form-footer">
