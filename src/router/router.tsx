@@ -2,8 +2,6 @@ import React, { Suspense, Fragment, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 import LoadingScreen from "../components/Loading/Loading";
-import AuthGuard from "../guards/AuthGuard";
-import authRoutes from "./routes/auth/auth";
 
 const RenderRoutes = () => (
   <Suspense fallback={<LoadingScreen />}>
@@ -42,20 +40,8 @@ const RenderRoutes = () => (
 export default RenderRoutes;
 
 export const routes = [
-  ...authRoutes,
   {
-   path: "/",
-   guard: AuthGuard,
-   layout: MainLayout,
-    routes: [
-      {
-        path: "/home",
-        component: lazy(() => import("../views/Home")),
-      },
-      {
-        path: "/chat",
-        component: lazy(() => import("../views/chat/Chat")),
-      },
-    ],
+    path: "/",
+    component: lazy(() => import("../views/Home")),
   },
 ];
