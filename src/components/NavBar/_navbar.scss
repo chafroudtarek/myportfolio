@@ -1,0 +1,163 @@
+@use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets//styles/abstracts/mixins" as *;
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+  @include mq(700px, max) {
+    padding: 2rem 5rem;
+  }
+  @include mq(600px, max) {
+    padding: 2rem 1rem;
+  }
+
+  .logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      height: 4rem;
+      width: 4rem;
+    }
+    span {
+      margin-top: 32px;
+      font-size: 25px;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    align-self: flex-end;
+    gap: 1rem;
+    .link {
+      color: $gray;
+      span {
+        color: $primary;
+      }
+    }
+    .activeLink {
+      color: $white !important;
+      span {
+        color: $primary;
+      }
+    }
+    @include mq(700px, max) {
+      display: none;
+    }
+  }
+  .menu {
+    display: none;
+    margin-top: 1.5rem;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    .firstline {
+      display: block;
+      width: 2.5rem;
+      height: 5px;
+      background-color: #d9d9d9;
+      transition: all 0.5s ease-in-out;
+    }
+    .secondline {
+      margin-top: 5px;
+      display: block;
+      width: 2rem;
+      height: 5px;
+      background-color: #d9d9d9;
+      margin-left: 0.5rem;
+      transition: all 0.5s ease-in-out;
+    }
+
+    @include mq(700px, max) {
+      display: block;
+    }
+  }
+  .active-menu {
+    z-index: 999;
+    .firstline {
+      transform: rotate(-45deg);
+    }
+    .secondline {
+      margin-top: -6px;
+      margin-left: 2.5px !important;
+      transform: rotate(45deg);
+    }
+
+    .mobile-nav {
+      position: absolute;
+      background-color: red;
+    }
+  }
+}
+.mobile_navs {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #282c33;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem 3rem;
+  gap: 4rem;
+  visibility: hidden;
+  right: 100%;
+  transition: all 1s ease-in-out;
+  z-index: 997;
+  .logo_container {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 4rem;
+      width: 4rem;
+    }
+    span {
+      margin-top: 32px;
+      font-size: 25px;
+    }
+  }
+
+  ul {
+    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .link {
+      color: $gray;
+      font-size: 35px;
+      span {
+        color: $primary;
+      }
+    }
+  }
+  .socialmedia {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+
+    img {
+      opacity: 0;
+      align-self: flex-end;
+      height: 60px;
+      height: 60px;
+      transition: all 3s ease-in-out;
+    }
+  }
+}
+
+.active-navs {
+  visibility: visible !important;
+  right: 0%;
+  .socialmedia {
+    img {
+      opacity: 1;
+    }
+  }
+}

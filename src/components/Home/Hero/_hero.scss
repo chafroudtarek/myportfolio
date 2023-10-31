@@ -1,0 +1,139 @@
+@use "../../../assets/styles/abstracts/variables" as *;
+@use "../../../assets//styles/abstracts/mixins" as *;
+.hero_container {
+  padding: 2rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  @include mq(700px, max) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .left_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    @include mq(400px, max) {
+      gap: 10px;
+    }
+    h3 {
+      max-width: 35rem;
+      color: var(--white, #fff);
+      font-family: Fira Code;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      @include mq(1200px, max) {
+        font-size: 20px;
+        max-width: 30rem;
+      }
+      @include mq(1000px, max) {
+        font-size: 18px;
+        max-width: 25rem;
+      }
+      @include mq(700px, max) {
+        font-size: 25px;
+        max-width: 27rem;
+      }
+      @include mq(400px, max) {
+        font-size: 20px;
+        max-width: 27rem;
+        text-align: center;
+      }
+      span {
+        color: var(--primary, #0ea4f8);
+      }
+    }
+    p {
+      max-width: 30rem;
+      color: var(--gray, #abb2bf);
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      @include mq(1200px, max) {
+        font-size: 12px;
+        max-width: 25rem;
+      }
+      @include mq(1000px, max) {
+        font-size: 10px;
+        max-width: 20rem;
+      }
+      @include mq(700px, max) {
+        font-size: 14px;
+        max-width: 25rem;
+        text-align: center;
+      }
+    }
+
+    button {
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      width: max-content;
+      padding: 7px;
+      background-color: transparent;
+      color: $white;
+      border: 1px solid var(--primary, #0ea4f8);
+      @include mq(1200px, max) {
+        font-size: 10px;
+      }
+      @include mq(400px, max) {
+        align-self: center;
+      }
+    }
+  }
+  .hero_img_container {
+    position: relative;
+    img {
+      height: 420px;
+      width: 420px;
+      @include mq(1200px, max) {
+        height: 320px;
+        width: 320px;
+      }
+      @include mq(1000px, max) {
+        height: 220px;
+        width: 220px;
+      }
+      @include mq(700px, max) {
+        height: 320px;
+        width: 320px;
+      }
+      @include mq(400px, max) {
+        height: 280px;
+        width: 280px;
+      }
+    }
+    .currentwork {
+      display: flex;
+      gap: 5px;
+      div {
+        margin-top: 1px;
+        width: 17px;
+        height: 17px;
+        background-color: $primary;
+        @include mq(700px, max) {
+          width: 12px;
+          height: 12px;
+        }
+      }
+      bottom: 7px;
+      padding: 5px;
+      position: absolute;
+      width: 90%;
+      align-self: center;
+      border: 1px solid var(--gray, #abb2bf);
+      @include mq(700px, max) {
+        font-size: 10px !important;
+        bottom: 1px;
+      }
+    }
+  }
+}
