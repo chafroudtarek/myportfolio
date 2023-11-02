@@ -1,0 +1,98 @@
+@use "../../assets//styles/abstracts/mixins" as *;
+
+.footer_container {
+  width: 100%;
+  padding: 32px;
+  border-top: 1px solid #abb2bf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .main_part {
+    width: 80%;
+    @include mq(900px, max) {
+      width: 100%;
+    }
+    &_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      @include mq(600px, max) {
+        flex-direction: column;
+      }
+      .right_part {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .top_part {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          .logo_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+              margin-left: -10px;
+              align-self: flex-end;
+            }
+          }
+          .email {
+            align-self: flex-end;
+            color: var(--gray, #abb2bf);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .bottom_part {
+          color: var(--white, #fff);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .left_part {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        span {
+          color: var(--white, #fff);
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        .media_items {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+      }
+    }
+    .copyright {
+      width: 100%;
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        color: var(--gray, #abb2bf);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

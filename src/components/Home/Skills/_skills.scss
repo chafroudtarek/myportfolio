@@ -1,0 +1,127 @@
+@use "../../../assets//styles/abstracts/mixins" as *;
+
+.skills_container {
+  width: 80%;
+  margin: 9rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .skills-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .title {
+      color: var(--white, #fff);
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      .hashtag {
+        color: var(--primary, #0ea4f8);
+      }
+    }
+
+    .line {
+      border: 0.5px solid var(--primary, #0ea4f8);
+      width: 20rem;
+    }
+  }
+  .main_part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .shapes {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      @include mq(900px, max) {
+        display: none;
+      }
+
+      .top_part {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .rectangle {
+          align-self: flex-start;
+        }
+      }
+      .bottom_part {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+
+        .shape {
+          margin-top: 2rem;
+        }
+        .points {
+          align-self: flex-start;
+        }
+      }
+    }
+    .skills_items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      @include mq(900px, max) {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+      }
+      @include mq(500px, max) {
+        width: 100%;
+        grid-template-columns: 1fr;
+        column-gap: 10px;
+      }
+
+      .item_container {
+        border: 1px solid var(--gray, #abb2bf);
+        min-height: 75px;
+        max-height: max-content;
+        width: 250px;
+        .col_title {
+          padding: 10px;
+          color: var(--white, #fff);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          border-bottom: 1px solid var(--gray, #abb2bf);
+        }
+        .col_content {
+          color: var(--gray, #abb2bf);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          padding: 10px;
+          line-height: 1.5;
+        }
+      }
+      .skills_item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        @include mq(500px, max) {
+          margin-top: 1rem;
+          width: 100%;
+        }
+        .first {
+          @include mq(500px, max) {
+            align-self: end;
+          }
+        }
+        .second {
+          @include mq(500px, max) {
+            align-self: baseline;
+          }
+        }
+      }
+    }
+  }
+}

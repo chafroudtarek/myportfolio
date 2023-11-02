@@ -1,0 +1,65 @@
+@use "../../../assets//styles/abstracts/mixins" as *;
+
+.aboutme_container {
+  width: 80%;
+  margin: 9rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .aboutme-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .title {
+      color: var(--white, #fff);
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      .hashtag {
+        color: var(--primary, #0ea4f8);
+      }
+    }
+
+    .line {
+      border: 0.5px solid var(--primary, #0ea4f8);
+      width: 25rem;
+    }
+  }
+  .main_part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mq(800px, max) {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+    .description {
+      max-width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      color: var(--gray, #abb2bf);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      @include mq(800px, max) {
+        max-width: 100%;
+      }
+
+      div {
+        border: 1px solid var(--primary, #0ea4f8);
+        width: max-content;
+        padding: 10px;
+        color: white;
+        @include mq(800px, max) {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
