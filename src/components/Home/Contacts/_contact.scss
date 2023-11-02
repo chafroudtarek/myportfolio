@@ -1,0 +1,91 @@
+@use "../../../assets//styles/abstracts/mixins" as *;
+
+.contact_container {
+  width: 100%;
+  position: relative;
+  .contact_body {
+    width: 80%;
+    margin: 9rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .contact-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .title {
+        color: var(--white, #fff);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        .hashtag {
+          color: var(--primary, #0ea4f8);
+        }
+      }
+
+      .line {
+        border: 0.5px solid var(--primary, #0ea4f8);
+        width: 15rem;
+      }
+    }
+    .main_part {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include mq(600px, max) {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+      }
+      p {
+        align-self: baseline;
+        max-width: 45%;
+        color: var(--gray, #abb2bf);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include mq(900px, max) {
+          max-width: 80%;
+        }
+        @include mq(600px, max) {
+          max-width: 100%;
+        }
+      }
+      .details_container {
+        border: 1px solid var(--gray, #abb2bf);
+        width: 204px;
+        height: 141px;
+        padding: 20px 10px 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        span {
+          color: var(--white, #fff);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .media_container {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 10px;
+          span {
+            color: var(--gray, #abb2bf);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+}

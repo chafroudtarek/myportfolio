@@ -1,0 +1,64 @@
+@use "../../../assets//styles/abstracts/mixins" as *;
+
+.quote_container {
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  .phrase_container {
+    width: max-content;
+    padding: 20px;
+    border: 1px solid #abb2bf;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      @include mq(500px, max) {
+        font-size: 11px;
+      }
+    }
+    .top_part {
+      position: absolute;
+      left: 15px;
+      top: -9px;
+      height: 20px;
+    }
+    .bottom_part {
+      position: absolute;
+      right: 15px;
+      bottom: -9px;
+      height: 20px;
+      z-index: 99;
+    }
+    .author_container {
+      width: max-content;
+      padding: 15px;
+      border: 1px solid #abb2bf;
+      text-align: center;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: -52.5px;
+      right: -1px;
+      @include mq(500px, max) {
+        bottom: -47.5px;
+      }
+    }
+  }
+  .square {
+    position: absolute;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    border: 1px solid #abb2bf;
+    height: 4rem;
+    width: 4rem;
+    @include mq(700px, max) {
+      display: none;
+    }
+  }
+}
