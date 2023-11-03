@@ -36,6 +36,12 @@
             span {
               margin-left: -10px;
               align-self: flex-end;
+              @include mq(400px, max) {
+                display: none;
+              }
+            }
+            @include mq(400px, max) {
+              height: 30px;
             }
           }
           .email {
@@ -45,6 +51,9 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            @include mq(400px, max) {
+              font-size: 14px;
+            }
           }
         }
         .bottom_part {
@@ -56,6 +65,14 @@
           display: flex;
           align-items: center;
           justify-content: center;
+
+          @include mq(650px, max) {
+            font-size: 12px;
+          }
+          @include mq(400px, max) {
+            font-size: 10px;
+            margin-left: 1.5rem;
+          }
         }
       }
       .left_part {

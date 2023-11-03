@@ -1,7 +1,28 @@
-.app_container {
+@use "../assets//styles/abstracts/mixins" as *;
+
+.home_container {
   width: 100vw;
   height: max-content;
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
+
+  .side_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 3rem;
+    @include mq(650px, max) {
+      display: none;
+    }
+    .side_line {
+      height: 15rem;
+      width: 2px;
+      background: #abb2bf;
+      border-radius: 10px;
+    }
+  }
 }

@@ -8,10 +8,21 @@ import Skills from "../components/Home/Skills/Skills";
 import Aboutme from "../components/Home/AboutMe/Aboutme";
 import Contacts from "../components/Home/Contacts/Contacts";
 import Footer from "../components/Footer/Footer";
+import Linkedin from "../assets/icons/Linkedin.svg";
+import Email from "../assets/icons/gmail.png";
+import Github from "../assets/icons/Github.png";
+
 const Home = () => {
   const [isActiveMenu, setIsActiveMenu] = useState(false);
   return (
-    <div className="app_container">
+    <div className="home_container">
+      <div className="side_items">
+        <div className="side_line"></div>
+        <img src={Linkedin} alt="linkedin" height={"23px"} />
+        <img src={Email} alt="email" height={"20px"} />
+        <img src={Github} alt="github" height={"25px"} />
+      </div>
+
       <Navbar />
       <Hero />
       <Quote />
