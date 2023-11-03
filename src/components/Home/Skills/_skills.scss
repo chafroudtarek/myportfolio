@@ -16,7 +16,9 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-
+      @include mq(900px, max) {
+        font-size: 29px;
+      }
       .hashtag {
         color: var(--primary, #0ea4f8);
       }

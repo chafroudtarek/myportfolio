@@ -6,7 +6,7 @@ const Aboutme = () => {
       <div className="aboutme-header">
         <div className="title">
           <span className="hashtag">#</span>
-          About-me
+          about-me
         </div>
         <div className="line"></div>
       </div>

@@ -8,7 +8,7 @@ const Skills = () => {
       <div className="skills-header">
         <div className="title">
           <span className="hashtag">#</span>
-          Skills
+          skills
         </div>
         <div className="line"></div>
       </div>
