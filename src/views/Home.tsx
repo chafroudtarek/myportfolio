@@ -13,7 +13,6 @@ import Email from "../assets/icons/gmail.png";
 import Github from "../assets/icons/Github.png";
 
 const Home = () => {
-  const [isActiveMenu, setIsActiveMenu] = useState(false);
   return (
     <div className="home_container">
       <div className="side_items">

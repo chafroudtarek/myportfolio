@@ -1,0 +1,211 @@
+@use "../../../assets//styles/abstracts/mixins" as *;
+
+.info_container {
+  width: 80%;
+  margin: 9rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include mq(400px, max) {
+    width: 100%;
+  }
+
+  .extra-header {
+    margin-top: -2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .info-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .title {
+        width: max-content;
+        color: var(--white, #fff);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include mq(900px, max) {
+          font-size: 29px;
+        }
+        .hashtag {
+          color: var(--primary, #0ea4f8);
+        }
+      }
+
+      .line {
+        border: 0.5px solid var(--primary, #0ea4f8);
+        width: 25rem;
+        @include mq(600px, max) {
+          width: 10rem;
+          margin-left: 1rem;
+        }
+        @include mq(450px, max) {
+          display: none;
+        }
+      }
+    }
+    .subheader {
+      color: #fff;
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-left: 1rem;
+    }
+  }
+  .main_part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include mq(1000px, max) {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+    p {
+      color: var(--gray, #abb2bf);
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      max-width: 45%;
+      @include mq(1000px, max) {
+        font-size: 18px;
+        max-width: 80% !important;
+      }
+    }
+
+    .contact_tables {
+      display: flex;
+      gap: 20px;
+      @include mq(500px, max) {
+        flex-direction: column;
+        font-size: 18px;
+        max-width: 80% !important;
+      }
+      .support {
+        h5 {
+          color: var(--white, #fff);
+          font-family: Fira Code;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        border: 1px solid var(--gray, #abb2bf);
+        width: max-content;
+        height: max-content;
+        padding: 20px;
+      }
+      .message {
+        h5 {
+          color: var(--white, #fff);
+          font-family: Fira Code;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        border: 1px solid var(--gray, #abb2bf);
+        width: max-content;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+
+        .message_item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 5px;
+
+          span {
+            color: var(--gray, #abb2bf);
+            font-family: Fira Code;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include mq(350px, max) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .media_part {
+    .info-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .title {
+        width: max-content;
+        color: var(--white, #fff);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include mq(900px, max) {
+          font-size: 29px;
+        }
+        .hashtag {
+          color: var(--primary, #0ea4f8);
+        }
+      }
+
+      .line {
+        border: 0.5px solid var(--primary, #0ea4f8);
+        width: 25rem;
+        @include mq(600px, max) {
+          width: 10rem;
+          margin-left: 1rem;
+        }
+        @include mq(450px, max) {
+          display: none;
+        }
+      }
+    }
+
+    .media_item_container {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      @include mq(900px, max) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      @include mq(450px, max) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        img {
+          margin-top: 0.2rem;
+        }
+        span {
+          color: var(--gray, #abb2bf);
+          font-family: Fira Code;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

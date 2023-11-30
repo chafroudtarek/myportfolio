@@ -63,7 +63,6 @@ const Navbar = () => {
             <span>#</span>contacts
           </NavLink>
         </ul>
-
         <div className="socialmedia">
           <img src={Linkedin} alt="linkedin" />
           <img src={Email} alt="email" />
