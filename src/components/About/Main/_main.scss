@@ -1,0 +1,90 @@
+@use "../../../assets//styles/abstracts/mixins" as *;
+
+.main_container {
+  width: 80%;
+  margin: 9rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include mq(400px, max) {
+    width: 100%;
+  }
+
+  .extra-header {
+    margin-top: -2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .info-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .title {
+        width: max-content;
+        color: var(--white, #fff);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include mq(900px, max) {
+          font-size: 29px;
+          margin-left: 1rem;
+        }
+        .hashtag {
+          color: var(--primary, #0ea4f8);
+        }
+      }
+
+      .line {
+        border: 0.5px solid var(--primary, #0ea4f8);
+        width: 25rem;
+        @include mq(600px, max) {
+          width: 10rem;
+          margin-left: 1rem;
+        }
+        @include mq(450px, max) {
+          display: none;
+        }
+      }
+    }
+    .subheader {
+      color: #fff;
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-left: 1rem;
+    }
+  }
+  .main_container_info {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    @include mq(700px, max) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .leftSide {
+      width: 50%;
+      color: var(--gray, #abb2bf);
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @include mq(1000px, max) {
+        font-size: 12px;
+      }
+      @include mq(700px, max) {
+        width: 90%;
+      }
+    }
+  }
+}
