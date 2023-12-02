@@ -28,7 +28,7 @@ const Project = () => {
 
 export default Project;
 
-const ProjectItem = () => {
+export const ProjectItem = () => {
   return (
     <div className="project_container">
       <div className="img_container">

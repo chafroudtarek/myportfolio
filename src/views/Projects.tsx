@@ -1,10 +1,12 @@
+import React from "react";
+import Complete from "../components/Projects/complete/Complete";
+import Footer from "../components/Footer/Footer";
+import Navbar from "../components/NavBar/Navbar";
 import Linkedin from "../assets/icons/Linkedin.svg";
 import Email from "../assets/icons/gmail.png";
 import Github from "../assets/icons/Github.png";
-import Navbar from "../components/NavBar/Navbar";
-import Footer from "../components/Footer/Footer";
-import Info from "../components/Contact/info/Info";
-const Contact = () => {
+import Small from "../components/Projects/small/Small";
+const Projects = () => {
   return (
     <div className="body_container">
       <div className="side_items">
@@ -15,10 +17,11 @@ const Contact = () => {
       </div>
 
       <Navbar />
-      <Info />
+      <Complete />
+      <Small />
       <Footer />
     </div>
   );
 };
 
-export default Contact;
+export default Projects;

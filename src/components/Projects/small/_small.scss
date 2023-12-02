@@ -1,8 +1,8 @@
 @use "../../../assets//styles/abstracts/mixins" as *;
 
-.funfacts_container {
+.small_container {
   width: 80%;
-  margin: 10rem auto;
+  margin: 9rem auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -11,7 +11,7 @@
   }
 
   .extra-header {
-    margin-top: -2rem;
+    margin-top: -6rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -39,11 +39,8 @@
       .line {
         border: 0.5px solid var(--primary, #0ea4f8);
         width: 25rem;
+
         @include mq(600px, max) {
-          width: 10rem;
-          margin-left: 1rem;
-        }
-        @include mq(550px, max) {
           display: none;
         }
       }
@@ -58,48 +55,56 @@
       margin-left: 1rem;
     }
   }
-  .funfacts_container_info {
+
+  .small_container_items {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .smallProjectItem {
+      max-width: 350px;
+      height: max-content;
+      border: 1px solid var(--gray, #abb2bf);
 
-    .leftPart {
-      width: 70%;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      @include mq(1000px, max) {
-        width: 100%;
-      }
-      .quote {
+      .title {
+        padding: 10px;
         color: var(--gray, #abb2bf);
         font-family: Fira Code;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        width: max-content;
-        border: 1px solid var(--gray, #abb2bf);
-        padding: 10px;
-        span {
-          color: white;
+        border-bottom: 1px solid var(--gray, #abb2bf);
+      }
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        h3 {
+          color: var(--white, #fff);
+          font-family: Fira Code;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
         }
-      }
-    }
-    .rightPart {
-      @include mq(1000px, max) {
-        display: none;
-      }
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      width: 30%;
-      justify-content: center;
-      align-items: center;
 
-      img {
-        height: 80px;
-        width: 80px;
+        p {
+          color: var(--gray, #abb2bf);
+          font-family: Fira Code;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .button {
+          border: 1px solid var(--primary, #0ea4f8);
+          padding: 10px;
+          width: max-content;
+        }
       }
     }
   }

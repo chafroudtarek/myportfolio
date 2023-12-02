@@ -4,12 +4,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Home from "./views/Home";
 import Contact from "./views/Contact";
 import Aboutme from "./views/AboutMe";
+import Projects from "./views/Projects";
 
 function App() {
   return (
     <BrowserRouter>
       <ToastContainer />
-      <Aboutme />
+      <Projects />
+      {/* <Aboutme /> */}
       {/* <Home />  */}
       {/* <Contact/> */}
     </BrowserRouter>
