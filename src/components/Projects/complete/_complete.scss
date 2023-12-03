@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
   @include mq(400px, max) {
     width: 100%;
   }
@@ -107,5 +108,18 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .points {
+    position: absolute;
+    left: -9rem;
+    top: 18rem;
+    height: 5rem;
+  }
+  .square {
+    position: absolute;
+    right: -19rem;
+    top: 50rem;
+    height: 15rem;
+
   }
 }

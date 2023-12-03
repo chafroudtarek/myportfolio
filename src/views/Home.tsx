@@ -11,6 +11,9 @@ import Footer from "../components/Footer/Footer";
 import Linkedin from "../assets/icons/Linkedin.svg";
 import Email from "../assets/icons/gmail.png";
 import Github from "../assets/icons/Github.png";
+import { StarField } from "../components/StarryBackground/StarryBackground";
+import ShootingStarField from "../components/ShootingStar/ShootingStar";
+import ShootingStar from "../components/ShootingStar/ShootingStar";
 
 const Home = () => {
   return (
@@ -23,12 +26,18 @@ const Home = () => {
       </div>
 
       <Navbar />
+      <StarField numStars={200} />
+
+      <ShootingStar />
       <Hero />
       <Quote />
       <Project />
+  
+
       <Skills />
       <Aboutme />
       <Contacts />
+
       <Footer />
     </div>
   );

@@ -23,13 +23,13 @@ const Navbar = () => {
           >
             <span>#</span>home
           </NavLink>
-          <NavLink to="/works" className="link">
+          <NavLink to="/projects" className="link">
             <span>#</span>works
           </NavLink>
-          <NavLink to="/aboutme" className="link">
+          <NavLink to="/about" className="link">
             <span>#</span>about me{" "}
           </NavLink>
-          <NavLink to="contacts" className="link">
+          <NavLink to="/contact" className="link">
             <span>#</span>contacts
           </NavLink>
         </ul>

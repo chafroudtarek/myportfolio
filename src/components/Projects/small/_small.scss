@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
   @include mq(400px, max) {
     width: 100%;
   }
@@ -107,5 +108,13 @@
         }
       }
     }
+  }
+
+  .shape {
+    position: absolute;
+    height: 12rem;
+    width: 12rem;
+    left: -13rem;
+    top: 10rem;
   }
 }

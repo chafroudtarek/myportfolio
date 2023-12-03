@@ -6,9 +6,14 @@ import Linkedin from "../assets/icons/Linkedin.svg";
 import Email from "../assets/icons/gmail.png";
 import Github from "../assets/icons/Github.png";
 import Small from "../components/Projects/small/Small";
+import { StarField } from "../components/StarryBackground/StarryBackground";
+import ShootingStar from "../components/ShootingStar/ShootingStar";
 const Projects = () => {
   return (
     <div className="body_container">
+      <StarField numStars={200} />
+      <ShootingStar />
+
       <div className="side_items">
         <div className="side_line"></div>
         <img src={Linkedin} alt="linkedin" height={"23px"} />
@@ -18,6 +23,7 @@ const Projects = () => {
 
       <Navbar />
       <Complete />
+
       <Small />
       <Footer />
     </div>

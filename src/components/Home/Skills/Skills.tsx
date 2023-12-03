@@ -2,9 +2,12 @@ import React from "react";
 import Points from "../../../assets/icons/rectangleOfPoints.png";
 import Rectangle from "../../../assets/icons/rectangle.png";
 import Shape from "../../../assets/icons/shape.png";
+import ShootingStar from "../../ShootingStar/ShootingStar";
 const Skills = () => {
   return (
     <div className="skills_container">
+      <ShootingStar />
+
       <div className="skills-header">
         <div className="title">
           <span className="hashtag">#</span>

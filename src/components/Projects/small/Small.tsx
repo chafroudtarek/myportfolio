@@ -1,5 +1,4 @@
-import React from "react";
-
+import Shape from "../../../assets/icons/shape.png";
 const Small = () => {
   return (
     <div className="small_container">
@@ -14,14 +13,14 @@ const Small = () => {
       </div>
 
       <div className="small_container_items">
-        <SmallProjectItem/>
-        <SmallProjectItem/>
-        <SmallProjectItem/>
-        <SmallProjectItem/>
-        <SmallProjectItem/>
-        <SmallProjectItem/>
-
+        <SmallProjectItem />
+        <SmallProjectItem />
+        <SmallProjectItem />
+        <SmallProjectItem />
+        <SmallProjectItem />
+        <SmallProjectItem />
       </div>
+      <img src={Shape} alt="shape" className="shape" />
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import React from "react";
 import { ProjectItem } from "../../Home/Project/Project";
+import Points from "../../../assets/icons/rectangleOfPoints.png";
+import Square from "../../../assets/icons/rectangle.png";
 
 const Complete = () => {
   return (
@@ -12,7 +14,7 @@ const Complete = () => {
           </div>
           <div className="line"></div>
         </div>
-        <span className="subheader">List of my projects</span>
+        <span className="subheader">List of my projects.</span>
       </div>
 
       <div className="second-header">
@@ -32,6 +34,8 @@ const Complete = () => {
         <ProjectItem />
         <ProjectItem />
       </div>
+      <img src={Points} alt="points" className="points" />
+      <img src={Square} alt="square" className="square" />
     </div>
   );
 };
