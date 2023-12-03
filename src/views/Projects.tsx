@@ -1,28 +1,24 @@
-import { useState } from "react";
-
-import Navbar from "../components/NavBar/Navbar";
-import Hero from "../components/Home/Hero/Hero";
-import Quote from "../components/Home/quote/Quote";
-import Project from "../components/Home/Project/Project";
-import Skills from "../components/Home/Skills/Skills";
-import Aboutme from "../components/Home/AboutMe/Aboutme";
-import Contacts from "../components/Home/Contacts/Contacts";
+import React from "react";
+import Complete from "../components/Projects/complete/Complete";
 import Footer from "../components/Footer/Footer";
+import Navbar from "../components/NavBar/Navbar";
 import Linkedin from "../assets/icons/Linkedin.svg";
 import Email from "../assets/icons/gmail.png";
 import Github from "../assets/icons/Github.png";
+import Small from "../components/Projects/small/Small";
 import { StarField } from "../components/StarryBackground/StarryBackground";
-import ShootingStarField from "../components/ShootingStar/ShootingStar";
 import ShootingStar from "../components/ShootingStar/ShootingStar";
 import ThunderStorm from "../assets/sounds/thunderstorm.mp3";
 import useSound from "use-sound";
 
-
-const Home = () => {
+const Projects = () => {
   const [playSound, { stop }] = useSound(ThunderStorm);
   playSound();
   return (
-    <div className="home_container">
+    <div className="body_container">
+      <StarField numStars={200} />
+      <ShootingStar />
+
       <div className="side_items">
         <div className="side_line"></div>
         <img src={Linkedin} alt="linkedin" height={"23px"} />
@@ -31,21 +27,12 @@ const Home = () => {
       </div>
 
       <Navbar />
-      <StarField numStars={200} />
+      <Complete />
 
-      <ShootingStar />
-      <Hero />
-      <Quote />
-      <Project />
-  
-
-      <Skills />
-      <Aboutme />
-      <Contacts />
-
+      <Small />
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Projects;

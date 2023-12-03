@@ -18,18 +18,18 @@ const Navbar = () => {
         </div>
         <ul>
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) => (isActive ? "activeLink" : "link")}
           >
             <span>#</span>home
           </NavLink>
-          <NavLink to="/works" className="link">
+          <NavLink to="/projects" className="link">
             <span>#</span>works
           </NavLink>
-          <NavLink to="/aboutme" className="link">
+          <NavLink to="/about" className="link">
             <span>#</span>about me{" "}
           </NavLink>
-          <NavLink to="contacts" className="link">
+          <NavLink to="/contact" className="link">
             <span>#</span>contacts
           </NavLink>
         </ul>
@@ -63,7 +63,6 @@ const Navbar = () => {
             <span>#</span>contacts
           </NavLink>
         </ul>
-
         <div className="socialmedia">
           <img src={Linkedin} alt="linkedin" />
           <img src={Email} alt="email" />

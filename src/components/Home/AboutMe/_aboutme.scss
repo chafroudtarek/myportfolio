@@ -12,12 +12,15 @@
     align-items: center;
     gap: 10px;
     .title {
+      width: max-content;
       color: var(--white, #fff);
       font-size: 32px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-
+      @include mq(900px, max) {
+        font-size: 29px;
+      }
       .hashtag {
         color: var(--primary, #0ea4f8);
       }
@@ -26,6 +29,10 @@
     .line {
       border: 0.5px solid var(--primary, #0ea4f8);
       width: 25rem;
+      @include mq(600px, max) {
+        width: 10rem;
+        margin-left: 1rem;
+      }
     }
   }
   .main_part {

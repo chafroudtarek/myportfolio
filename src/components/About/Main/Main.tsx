@@ -1,19 +1,22 @@
-import React from "react";
-import Anonym from "../../../assets/images/anonym.png";
-const Aboutme = () => {
+import Avatar from "../../../assets/images/hero.png";
+
+const Main = () => {
   return (
-    <div className="aboutme_container">
-      <div className="aboutme-header">
-        <div className="title">
-          <span className="hashtag">#</span>
-          about-me
+    <div className="main_container">
+      <div className="extra-header">
+        <div className="info-header">
+          <div className="title">
+            <span className="hashtag">#</span>
+            About-me
+          </div>
+          <div className="line"></div>
         </div>
-        <div className="line"></div>
+        <span className="subheader">Who am i?</span>
       </div>
 
-      <div className="main_part">
-        <div className="description">
-          <p>Hello, i’m Tarek!</p>
+      <div className="main_container_info">
+        <div className="leftSide">
+          <p>Hello, i’m Elias!</p>
           <p>
             I’m a self-taught front-end developer based in Kyiv, Ukraine. I can
             develop responsive websites from scratch and raise them into modern
@@ -25,12 +28,13 @@ const Aboutme = () => {
             establish their presence online. I always strive to learn about the
             newest technologies and frameworks.
           </p>
-          <div>{"Read more ->"}</div>
         </div>
-        <img src={Anonym} alt="anonym" />
+        <div className="rightSide">
+          <img src={Avatar} alt="hero" />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Aboutme;
+export default Main;

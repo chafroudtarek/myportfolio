@@ -51,7 +51,7 @@
           color: var(--primary, #0ea4f8);
         }
         @include mq(900px, max) {
-          font-size: 15px;
+          font-size: 29px;
         }
       }
       .line {
@@ -94,76 +94,76 @@
         grid-template-columns: repeat(1, 1fr);
       }
     }
-    .project_container {
-      border: 1px solid var(--gray, #abb2bf);
-      height: 450px;
-      width: 330px;
-      .img_container {
-        object-fit: cover;
-        height: 200px;
-        overflow: hidden;
-        border-bottom: 1px solid var(--gray, #abb2bf);
-      }
-      .technologies {
-        padding: 7px;
-        max-height: max-content;
-        border-bottom: 1px solid var(--gray, #abb2bf);
-        color: var(--gray, #abb2bf);
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-      .details {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 20px 10px;
-        .title {
-          color: var(--white, #fff);
-          font-family: Fira Code;
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
-        .description {
-          color: var(--gray, #abb2bf);
-          font-family: Fira Code;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
-      }
-      .status_container {
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .status {
-          padding: 7px;
-          width: max-content;
-          border: 1px solid var(--primary, #0ea4f8);
-          color: var(--white, #fff);
-          font-family: Fira Code;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
-        .location {
-          padding: 7px;
-          width: max-content;
-          border: 1px solid var(--primary, #abb2bf);
-          color: var(--white, #fff);
-          font-family: Fira Code;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
-      }
+  }
+}
+.project_container {
+  border: 1px solid var(--gray, #abb2bf);
+  height: 450px;
+  width: 330px;
+  .img_container {
+    object-fit: cover;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--gray, #abb2bf);
+  }
+  .technologies {
+    padding: 7px;
+    max-height: max-content;
+    border-bottom: 1px solid var(--gray, #abb2bf);
+    color: var(--gray, #abb2bf);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px 10px;
+    .title {
+      color: var(--white, #fff);
+      font-family: Fira Code;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .description {
+      color: var(--gray, #abb2bf);
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .status_container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .status {
+      padding: 7px;
+      width: max-content;
+      border: 1px solid var(--primary, #0ea4f8);
+      color: var(--white, #fff);
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .location {
+      padding: 7px;
+      width: max-content;
+      border: 1px solid var(--primary, #abb2bf);
+      color: var(--white, #fff);
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
     }
   }
 }
