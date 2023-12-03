@@ -6,13 +6,15 @@ import Contact from "./views/Contact";
 import Aboutme from "./views/AboutMe";
 import Projects from "./views/Projects";
 import NotFound from "./components/notFound/NotFound";
+import { UnsplashScreen } from "./components/unsplash/UnsplashScreen";
 
 function App() {
   return (
     <Router>
       <ToastContainer />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<UnsplashScreen text="test" />} />
+        <Route path="/home" element={<Home />} />
         <Route path="projects" element={<Projects />} />
         <Route path="about" element={<Aboutme />} />
         <Route path="contact" element={<Contact />} />

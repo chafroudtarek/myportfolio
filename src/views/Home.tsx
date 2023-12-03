@@ -14,8 +14,13 @@ import Github from "../assets/icons/Github.png";
 import { StarField } from "../components/StarryBackground/StarryBackground";
 import ShootingStarField from "../components/ShootingStar/ShootingStar";
 import ShootingStar from "../components/ShootingStar/ShootingStar";
+import ThunderStorm from "../assets/sounds/thunderstorm.mp3";
+import useSound from "use-sound";
+
 
 const Home = () => {
+  const [playSound, { stop }] = useSound(ThunderStorm);
+  playSound();
   return (
     <div className="home_container">
       <div className="side_items">

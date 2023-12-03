@@ -1,0 +1,50 @@
+.full_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.typewriter {
+  width: max-content;
+}
+.typewriter h1 {
+  font-family: "Fira code";
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 5.5s steps(30, end), blink-caret 3s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.button {
+  border: 1px solid var(--primary, #0ea4f8);
+  padding: 10px;
+  width: max-content;
+  cursor: pointer;
+}

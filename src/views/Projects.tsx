@@ -8,7 +8,12 @@ import Github from "../assets/icons/Github.png";
 import Small from "../components/Projects/small/Small";
 import { StarField } from "../components/StarryBackground/StarryBackground";
 import ShootingStar from "../components/ShootingStar/ShootingStar";
+import ThunderStorm from "../assets/sounds/thunderstorm.mp3";
+import useSound from "use-sound";
+
 const Projects = () => {
+  const [playSound, { stop }] = useSound(ThunderStorm);
+  playSound();
   return (
     <div className="body_container">
       <StarField numStars={200} />
