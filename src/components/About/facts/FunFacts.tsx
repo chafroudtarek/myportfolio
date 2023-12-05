@@ -14,14 +14,22 @@ const FunFacts = () => {
       </div>
       <div className="funfacts_container_info">
         <div className="leftPart">
-          <div className="quote">I like winter more than summer</div>
-          <div className="quote">I often bike with my friends </div>
           <div className="quote">
-            I like <span>pizza</span> and <span>pasta</span>
+            I like <span>winter</span> more than summer
           </div>
-          <div className="quote">I was in Egypt, Poland and Turkey </div>
-          <div className="quote">My favorite movie is The Green Mile </div>
-          <div className="quote">I am still in school</div>
+          <div className="quote">I enjoy coding in the late hours </div>
+          <div className="quote">
+            Teaches people on <span>weekends.</span>
+          </div>
+          <div className="quote">
+            <span>Volunteering </span>and community <span>impact</span>{" "}
+          </div>
+          <div className="quote">
+            Balancing work and personal projects keeps my schedule dynamic{" "}
+          </div>
+          <div className="quote">
+            Achieving my master's degree this <span>year.</span>
+          </div>
         </div>
 
         <div className="rightPart">
