@@ -22,7 +22,7 @@
     position: absolute;
     right: 0;
     bottom: 40px;
-    border: 1px solid #abb2bf;
+    border: 2px solid #abb2bf;
     width: 5rem;
     height: 10rem;
     @include mq(1100px, max) {
@@ -97,19 +97,19 @@
   }
 }
 .project_container {
-  border: 1px solid var(--gray, #abb2bf);
+  border: 2px solid var(--gray, #abb2bf);
   height: 450px;
   width: 330px;
   .img_container {
     object-fit: cover;
     height: 200px;
     overflow: hidden;
-    border-bottom: 1px solid var(--gray, #abb2bf);
+    border-bottom: 2px solid var(--gray, #abb2bf);
   }
   .technologies {
     padding: 7px;
     max-height: max-content;
-    border-bottom: 1px solid var(--gray, #abb2bf);
+    border-bottom: 2px solid var(--gray, #abb2bf);
     color: var(--gray, #abb2bf);
     font-size: 16px;
     font-style: normal;
@@ -146,7 +146,7 @@
     .status {
       padding: 7px;
       width: max-content;
-      border: 1px solid var(--primary, #0ea4f8);
+      border: 2px solid var(--primary, #0ea4f8);
       color: var(--white, #fff);
       font-family: Fira Code;
       font-size: 16px;
@@ -157,7 +157,7 @@
     .location {
       padding: 7px;
       width: max-content;
-      border: 1px solid var(--primary, #abb2bf);
+      border: 2px solid var(--primary, #abb2bf);
       color: var(--white, #fff);
       font-family: Fira Code;
       font-size: 16px;

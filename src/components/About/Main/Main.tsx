@@ -16,7 +16,7 @@ const Main = () => {
 
       <div className="main_container_info">
         <div className="leftSide">
-          <p>Hello, i’m Elias!</p>
+          <p>Hello, i’m Tarek!</p>
           <p>
             I’m a self-taught front-end developer based in Kyiv, Ukraine. I can
             develop responsive websites from scratch and raise them into modern
