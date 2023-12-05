@@ -16,35 +16,45 @@ import ShootingStarField from "../components/ShootingStar/ShootingStar";
 import ShootingStar from "../components/ShootingStar/ShootingStar";
 import ThunderStorm from "../assets/sounds/thunderstorm.mp3";
 import useSound from "use-sound";
-
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [playSound, { stop }] = useSound(ThunderStorm);
   playSound();
+  const slideInFromRight = {
+    hidden: { x: "100%" },
+    visible: { x: 0 },
+  };
   return (
-    <div className="home_container">
-      <div className="side_items">
-        <div className="side_line"></div>
-        <img src={Linkedin} alt="linkedin" height={"23px"} />
-        <img src={Email} alt="email" height={"20px"} />
-        <img src={Github} alt="github" height={"25px"} />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={slideInFromRight}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="home_container">
+        <div className="side_items">
+          <div className="side_line"></div>
+          <img src={Linkedin} alt="linkedin" height={"23px"} />
+          <img src={Email} alt="email" height={"20px"} />
+          <img src={Github} alt="github" height={"25px"} />
+        </div>
+
+        <Navbar />
+        <StarField numStars={300} />
+
+        <ShootingStar />
+        <Hero />
+        <Quote />
+        <Project />
+
+        <Skills />
+        <Aboutme />
+        <Contacts />
+
+        <Footer />
       </div>
-
-      <Navbar />
-      <StarField numStars={200} />
-
-      <ShootingStar />
-      <Hero />
-      <Quote />
-      <Project />
-  
-
-      <Skills />
-      <Aboutme />
-      <Contacts />
-
-      <Footer />
-    </div>
+    </motion.div>
   );
 };
 

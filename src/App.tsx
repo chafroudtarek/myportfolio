@@ -13,7 +13,7 @@ function App() {
     <Router>
       <ToastContainer />
       <Routes>
-        <Route path="/" element={<UnsplashScreen text="test" />} />
+        <Route path="/" element={<UnsplashScreen />} />
         <Route path="/home" element={<Home />} />
         <Route path="projects" element={<Projects />} />
         <Route path="about" element={<Aboutme />} />
