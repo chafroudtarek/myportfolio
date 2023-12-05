@@ -16,7 +16,7 @@ export const UnsplashScreen = () => {
   const [playSound] = useSound(typeWriter);
   const [play] = useSound(Boom);
   const navigate = useNavigate();
-  playSound();
+  // playSound();
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
