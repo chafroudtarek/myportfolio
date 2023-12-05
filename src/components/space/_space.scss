@@ -1,0 +1,71 @@
+.circles {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #282c33;
+  z-index: 999;
+  animation: toBlack 3s ease-in;
+} /* UnsplashScreen.css */
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  //   animation: move-stars 1s linear infinite;
+}
+
+.stary-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: translate linear infinite;
+}
+
+@keyframes translate {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    width: 6px;
+    height: 6px;
+    opacity: 0;
+    transform: translateX(-600vh);
+  }
+  50% {
+    width: 4px;
+    height: 4px;
+    transform: translateX(-300vh);
+
+    opacity: 1;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+}
+
+.button {
+  border: 1px solid var(--primary, #0ea4f8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+@keyframes toBlack {
+  from {
+    background-color: #282c33;
+  }
+  to {
+    background-color: #000000;
+  }
+}

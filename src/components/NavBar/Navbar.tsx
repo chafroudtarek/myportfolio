@@ -3,10 +3,14 @@ import Linkedin from "../../assets/icons/Linkedin.svg";
 import Github from "../../assets/icons/Github.png";
 import Email from "../../assets/icons/gmail.png";
 import Logo from "../../assets/icons/logo-white.png";
+import Enter from "../../assets/sounds/enter.mp3";
 
 import { useState } from "react";
+import useSound from "use-sound";
 
 const Navbar = () => {
+  const [playEnter] = useSound(Enter);
+
   const [isActiveMenu, setIsActiveMenu] = useState(false);
 
   return (
@@ -23,13 +27,13 @@ const Navbar = () => {
           >
             <span>#</span>home
           </NavLink>
-          <NavLink to="/projects" className="link">
+          <NavLink to="/projects" className="link" onClick={playEnter as any}>
             <span>#</span>works
           </NavLink>
-          <NavLink to="/about" className="link">
+          <NavLink to="/about" className="link" onClick={playEnter as any}>
             <span>#</span>about me{" "}
           </NavLink>
-          <NavLink to="/contact" className="link">
+          <NavLink to="/contact" className="link" onClick={playEnter as any}>
             <span>#</span>contacts
           </NavLink>
         </ul>

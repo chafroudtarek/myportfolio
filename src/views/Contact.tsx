@@ -8,28 +8,42 @@ import { StarField } from "../components/StarryBackground/StarryBackground";
 import ShootingStar from "../components/ShootingStar/ShootingStar";
 import ThunderStorm from "../assets/sounds/thunderstorm.mp3";
 import useSound from "use-sound";
-
+import { motion } from "framer-motion";
 
 const Contact = () => {
-
+  const zoomInVariants = {
+    initial: { scale: 0.5, opacity: 0 },
+    animate: {
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
   const [playSound, { stop }] = useSound(ThunderStorm);
   playSound();
   return (
-    <div className="body_container">
-      <StarField numStars={200} />
-      <ShootingStar />
+    <motion.div
+      key="zoom-in-transition"
+      initial="initial"
+      animate="animate"
+      variants={zoomInVariants}
+    >
+      <div className="body_container">
+        <StarField numStars={200} />
+        <ShootingStar />
 
-      <div className="side_items">
-        <div className="side_line"></div>
-        <img src={Linkedin} alt="linkedin" height={"23px"} />
-        <img src={Email} alt="email" height={"20px"} />
-        <img src={Github} alt="github" height={"25px"} />
+        <div className="side_items">
+          <div className="side_line"></div>
+          <img src={Linkedin} alt="linkedin" height={"23px"} />
+          <img src={Email} alt="email" height={"20px"} />
+          <img src={Github} alt="github" height={"25px"} />
+        </div>
+
+        <Navbar />
+        <Info />
+        <Footer />
       </div>
-
-      <Navbar />
-      <Info />
-      <Footer />
-    </div>
+    </motion.div>
   );
 };
 

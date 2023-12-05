@@ -4,25 +4,41 @@ import useSound from "use-sound";
 import typeWriter from "../../assets/sounds/typewriter.mp3";
 import Boom from "../../assets/sounds/boom.mp3";
 import { useNavigate } from "react-router-dom";
+import SpaceScreen from "../space/Space";
+import Loader from "../Loader/Loader";
+import { StarField } from "../StarryBackground/StarryBackground";
 
-export const UnsplashScreen = ({ text }: { text: string }) => {
+export const UnsplashScreen = () => {
   const [displayText, setDisplayText] = useState(false);
-  const [playSound, { stop }] = useSound(typeWriter);
+  const [move, setMove] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const [playSound] = useSound(typeWriter);
   const [play] = useSound(Boom);
   const navigate = useNavigate();
-  playSound();
   useEffect(() => {
     setTimeout(() => {
+      setLoading(false);
       setDisplayText(true);
     }, 5000);
-    setTimeout(() => {
-      stop();
-    }, 10000);
+    // setTimeout(() => {
+    //   stop();
+    // }, 10000);
   });
 
-  // return <div>"{displayText}"</div>;
+  if (loading) {
+    return (
+      <>
+        <StarField numStars={300} /> <Loader />
+      </>
+    );
+  }
+  if (move) {
+    return <SpaceScreen />;
+  }
   return (
     <div className="full_container">
+      <StarField numStars={300} />
       {displayText && (
         <>
           <div className="typewriter">
@@ -32,9 +48,10 @@ export const UnsplashScreen = ({ text }: { text: string }) => {
             className="button"
             onClick={() => {
               play();
+              setMove(true);
               setTimeout(() => {
-                navigate("/projects");
-              }, 500);
+                navigate("/home");
+              }, 3000);
             }}
           >
             {" "}
@@ -42,8 +59,6 @@ export const UnsplashScreen = ({ text }: { text: string }) => {
           </div>
         </>
       )}
-
-      {/* <button onClick={playSound as any}>Play Sound</button> */}
     </div>
   );
 };
