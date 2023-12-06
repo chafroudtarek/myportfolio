@@ -1,5 +1,38 @@
 import Points from "../../../assets/icons/points.png";
-import PorjectImg from "../../../assets/images/project.jpg";
+import Eunoia from "../../../assets/images/eunoia.jpg";
+import Sea from "../../../assets/images/sea.png";
+import Salone from "../../../assets/images/salone.png";
+
+interface projectProps {
+  tech: string;
+  desc: string;
+  img: string;
+  title: string;
+  location: string;
+}
+const projects: projectProps[] = [
+  {
+    title: "eunoia academy",
+    tech: "angular, nodejs, expressjs,mongodb, docker, kafka, azure",
+    img: Eunoia,
+    desc: "SaaS app for LMS, HR management, accounting management, and identity.",
+    location: "Tunisia 🇹🇳 ",
+  },
+  {
+    title: "Salone Carthage",
+    tech: "astro ,shopify, sql ,scss, vercel, tailwind",
+    img: Salone,
+    desc: "Marketing app, adept at product administration, and proficient in leveraging Astro for an elevated user experience",
+    location: "France 🇫🇷",
+  },
+  {
+    title: "Sea energy",
+    tech: "reactjs, .net, sql, docker",
+    img: Sea,
+    desc: "Advanced e-commerce app for clients and administrators, featuring invoice management,automatic discounts, holiday scheduling,  and more",
+    location: "Italy 🇮🇹",
+  },
+];
 
 const Project = () => {
   return (
@@ -18,9 +51,15 @@ const Project = () => {
         <div className="details">{"View all ~~>"} </div>
       </div>
       <div className="project_items">
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
+        {projects.map((project: projectProps, index: number) => (
+          <ProjectItem
+            title={project.title}
+            desc={project.desc}
+            img={project.img}
+            tech={project.tech}
+            location={project.location}
+          />
+        ))}
       </div>
     </div>
   );
@@ -28,23 +67,27 @@ const Project = () => {
 
 export default Project;
 
-export const ProjectItem = () => {
+export const ProjectItem = ({
+  tech,
+  desc,
+  img,
+  title,
+  location,
+}: projectProps) => {
   return (
     <div className="project_container">
       <div className="img_container">
-        <img src={PorjectImg} alt="image" />
+        <img src={img} alt="image" />
       </div>
       <div className="technologies">
-        <p>html css react ,javascript html css react ,javascript</p>
+        <p>{tech}</p>
       </div>
       <div className="details">
-        <span className="title">SCHOOL MANAGEMENT</span>
-        <span className="description">
-          app for school manegement,app for school manegement
-        </span>
+        <span className="title">{title.toUpperCase()}</span>
+        <span className="description">{desc}</span>
         <div className="status_container">
           <div className="status"> {"Private <~>"}</div>
-          <div className="location"> {"Softylines 📍"}</div>
+          <div className="location">{location}</div>
         </div>
       </div>
     </div>

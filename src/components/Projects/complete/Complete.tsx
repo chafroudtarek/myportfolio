@@ -27,12 +27,12 @@ const Complete = () => {
         </div>
       </div>
       <div className="complete_projects_container">
+        {/* <ProjectItem />
         <ProjectItem />
         <ProjectItem />
         <ProjectItem />
         <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
+        <ProjectItem /> */}
       </div>
       <img src={Points} alt="points" className="points" />
       <img src={Square} alt="square" className="square" />

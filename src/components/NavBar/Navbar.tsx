@@ -58,13 +58,22 @@ const Navbar = () => {
           >
             <span>#</span>home
           </NavLink>
-          <NavLink to="/works" className="link">
+          <NavLink
+            to="/works"
+            className={({ isActive }) => (isActive ? "link" : "activeLink")}
+          >
             <span>#</span>works
           </NavLink>
-          <NavLink to="/aboutme" className="link">
+          <NavLink
+            to="/aboutme"
+            className={({ isActive }) => (isActive ? "link" : "activeLink")}
+          >
             <span>#</span>about me{" "}
           </NavLink>
-          <NavLink to="contacts" className="link">
+          <NavLink
+            to="contacts"
+            className={({ isActive }) => (isActive ? "link" : "activeLink")}
+          >
             <span>#</span>contacts
           </NavLink>
         </ul>

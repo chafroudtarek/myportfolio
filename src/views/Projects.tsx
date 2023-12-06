@@ -13,7 +13,7 @@ import useSound from "use-sound";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  const [playSound] = useSound(ThunderStorm);
+  const [playSound] = useSound(ThunderStorm,{});
   const warpVariants = {
     initial: { scale: 0.5, opacity: 0 },
     animate: {

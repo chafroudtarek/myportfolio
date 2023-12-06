@@ -5,11 +5,13 @@ const Hero = () => {
     <section className="hero_container">
       <div className="left_part">
         <h3>
-          Tarek is a <span>web developer</span> and an{" "}
-          <span>AWS Certified professional</span>
+          Tarek is a <span>Full stack developer</span> and a{" "}
+          <span>Content creator</span>
         </h3>
-        <p>He crafts responsive websites where technologies meet creativity</p>
-        <button>Download my cv</button>
+        <p>I craft responsive websites where technology meets creativity.</p>
+        <a className="dow_button" href="HeroImg" download="cvtarekchafroud.pdf">
+          Download my cv
+        </a>
       </div>
       <div className="hero_img_container">
         <img src={HeroImg} alt="heroimg" />
