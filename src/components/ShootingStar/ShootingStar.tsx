@@ -8,19 +8,19 @@ const ShootingStar = () => {
 
       <span className="item-star"></span> */}
 
-      {/* <span className="item-star"></span>
-
-      <span className="item-star"></span>
-
-      <span className="item-star"></span> */}
+      {/* <span className="item-star"></span> */}
 
       <span className="item-star"></span>
 
       {/* <span className="item-star"></span> */}
 
-      <span className="item-star"></span>
+      {/* <span className="item-star"></span> */}
+
+      {/* <span className="item-star"></span> */}
 
       <span className="item-star"></span>
+
+      {/* <span className="item-star"></span> */}
     </section>
   );
 };

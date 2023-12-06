@@ -1,7 +1,7 @@
 @use "../../../assets//styles/abstracts/mixins" as *;
 
 .skills_container {
-  width: 80%;
+    width: 80%;
   margin: 9rem auto;
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@
       }
 
       .item_container {
-        border: 1px solid var(--gray, #abb2bf);
+        border: 2px solid var(--gray, #abb2bf);
         min-height: 75px;
         max-height: max-content;
         width: 250px;
@@ -92,7 +92,7 @@
           font-style: normal;
           font-weight: 600;
           line-height: normal;
-          border-bottom: 1px solid var(--gray, #abb2bf);
+          border-bottom: 2px solid var(--gray, #abb2bf);
         }
         .col_content {
           color: var(--gray, #abb2bf);

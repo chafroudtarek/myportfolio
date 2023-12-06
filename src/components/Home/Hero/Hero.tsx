@@ -13,10 +13,10 @@ const Hero = () => {
       </div>
       <div className="hero_img_container">
         <img src={HeroImg} alt="heroimg" />
-        <div className="currentwork">
+        <span className="currentwork">
           <div></div>
           currently working on softylines
-        </div>
+        </span>
       </div>
     </section>
   );

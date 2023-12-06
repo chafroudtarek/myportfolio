@@ -6,7 +6,7 @@ import Github from "../../assets/icons/Github.png";
 
 const Footer = () => {
   return (
-    <div className="footer_container">
+    <section className="footer_container">
       <div className="main_part">
         <div className="main_part_content">
           <div className="right_part">
@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="email">chafroudtarek3@gmail.com</span>
             </div>
             <div className="bottom_part">
-              full stack developer and freelancer
+              <span>full stack developer and freelancer</span>
             </div>
           </div>
           <div className="left_part">
@@ -34,7 +34,7 @@ const Footer = () => {
           <span>© Copyright 2022. Made by Tarek</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

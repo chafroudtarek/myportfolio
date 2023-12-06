@@ -12,6 +12,7 @@ function App() {
   return (
     <Router>
       <ToastContainer />
+
       <Routes>
         <Route path="/" element={<UnsplashScreen />} />
         <Route path="/home" element={<Home />} />

@@ -30,7 +30,7 @@ export default Small;
 export const SmallProjectItem = () => {
   return (
     <div className="smallProjectItem">
-      <div className="title">Discord , ts, js</div>
+      <div className="title"> <p>Discord , ts, js</p></div>
       <div className="body">
         <h3>Bot Boilerplate</h3>
         <p>Start creating scalable discord.js bot with typescript in seconds</p>

@@ -32,7 +32,7 @@ const Home = () => {
       variants={slideInFromRight}
       transition={{ duration: 0.5 }}
     >
-      <div className="body_container">
+      <section className="body_container">
         <div className="side_items">
           <div className="side_line"></div>
           <img src={Linkedin} alt="linkedin" height={"23px"} />
@@ -53,7 +53,7 @@ const Home = () => {
         <Contacts />
 
         <Footer />
-      </div>
+      </section>
     </motion.div>
   );
 };

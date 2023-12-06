@@ -22,6 +22,7 @@ const Projects = () => {
       transition: { duration: 0.8, ease: "easeInOut" },
     },
   };
+  playSound();
   return (
     <motion.div
       key="space-warp-transition"
@@ -29,7 +30,7 @@ const Projects = () => {
       animate="animate"
       variants={warpVariants}
     >
-      <div className="body_container">
+      <section className="body_container">
         <StarField numStars={200} />
         <ShootingStar />
 
@@ -45,7 +46,7 @@ const Projects = () => {
 
         <Small />
         <Footer />
-      </div>
+      </section>
     </motion.div>
   );
 };
