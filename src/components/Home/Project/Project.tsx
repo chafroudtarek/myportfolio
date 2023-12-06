@@ -35,13 +35,13 @@ export const ProjectItem = () => {
         <img src={PorjectImg} alt="image" />
       </div>
       <div className="technologies">
-        html css react ,javascript html css react ,javascript
+        <p>html css react ,javascript html css react ,javascript</p>
       </div>
       <div className="details">
-        <div className="title">SCHOOL MANAGEMENT</div>
-        <div className="description">
+        <span className="title">SCHOOL MANAGEMENT</span>
+        <span className="description">
           app for school manegement,app for school manegement
-        </div>
+        </span>
         <div className="status_container">
           <div className="status"> {"Private <~>"}</div>
           <div className="location"> {"Softylines 📍"}</div>

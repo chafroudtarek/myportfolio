@@ -2,7 +2,7 @@ import Avatar from "../../../assets/images/hero.png";
 
 const Main = () => {
   return (
-    <div className="main_container">
+    <section className="main_container">
       <div className="extra-header">
         <div className="info-header">
           <div className="title">
@@ -38,7 +38,7 @@ const Main = () => {
           <img src={Avatar} alt="hero" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

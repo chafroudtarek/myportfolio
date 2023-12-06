@@ -30,23 +30,23 @@ const Aboutme = () => {
       animate="animate"
       variants={starfieldVariants}
     >
-      <div className="body_container">
+      <section className="body_container">
         <StarField numStars={200} />
         <ShootingStar />
 
-        <div className="side_items">
+        <section className="side_items">
           <div className="side_line"></div>
           <img src={Linkedin} alt="linkedin" height={"23px"} />
           <img src={Email} alt="email" height={"20px"} />
           <img src={Github} alt="github" height={"25px"} />
-        </div>
+        </section>
 
         <Navbar />
         <Main />
         <Skills />
         <FunFacts />
         <Footer />
-      </div>
+      </section>
     </motion.div>
   );
 };

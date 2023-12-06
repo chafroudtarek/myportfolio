@@ -7,8 +7,39 @@
   scrollbar-width: thin;
   scrollbar-width: 4px;
   scrollbar-color: #dadada #f4f4f4;
+  cursor: url("../../icons/cursor.png"), auto;
+}
+@keyframes cursorAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
+span:hover {
+  animation: cursorAnimation 0.8s ease-in-out;
+}
+img:hover {
+  animation: cursorAnimation 0.8s ease-in-out;
+}
+
+p:hover {
+  animation: cursorAnimation 0.8s ease-in-out;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  animation: cursorAnimation 0.8s ease-in-out;
+}
 body {
   font-family: "fira code", sans-serif;
   overflow: hidden;

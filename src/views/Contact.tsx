@@ -28,7 +28,7 @@ const Contact = () => {
       animate="animate"
       variants={zoomInVariants}
     >
-      <div className="body_container">
+      <section className="body_container">
         <StarField numStars={200} />
         <ShootingStar />
 
@@ -42,7 +42,7 @@ const Contact = () => {
         <Navbar />
         <Info />
         <Footer />
-      </div>
+      </section>
     </motion.div>
   );
 };

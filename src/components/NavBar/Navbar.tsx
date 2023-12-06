@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar_container">
+      <section className="navbar_container">
         <div className="logo_container">
           <img src={Logo} alt="logo" className="logo" />
           <span>hafroud</span>
@@ -24,6 +24,7 @@ const Navbar = () => {
           <NavLink
             to="/home"
             className={({ isActive }) => (isActive ? "activeLink" : "link")}
+            onClick={playEnter as any}
           >
             <span>#</span>home
           </NavLink>
@@ -44,7 +45,7 @@ const Navbar = () => {
           <span className="firstline"></span>
           <span className="secondline"></span>
         </div>
-      </div>
+      </section>
       <div className={` mobile_navs ${isActiveMenu ? "active-navs" : ""}`}>
         <div className="logo_container">
           <img src={Logo} alt="logo" className="logo" />

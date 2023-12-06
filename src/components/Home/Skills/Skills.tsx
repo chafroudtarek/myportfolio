@@ -30,29 +30,49 @@ const Skills = () => {
         <div className="skills_items">
           <div>
             <div className="item_container">
-              <div className="col_title">Languages</div>
-              <div className="col_content">Javascript typescript</div>
+              <div className="col_title">
+                <p>Languages</p>
+              </div>
+              <div className="col_content">
+                <p>Javascript typescript</p>
+              </div>
             </div>
           </div>
 
           <div className="skills_item">
             <div className="item_container first">
-              <div className="col_title">Databases</div>
-              <div className="col_content">SQLite Postgres Mongodb SQl</div>
+              <div className="col_title">
+                <p>Databases</p>
+              </div>
+              <div className="col_content">
+                <p>SQLite Postgres Mongodb SQl</p>
+              </div>
             </div>
             <div className="item_container second">
-              <div className="col_title">Other</div>
-              <div className="col_content">HTML CSS JAVA CONCEPTION</div>
+              <div className="col_title">
+                <p>Other</p>
+              </div>
+              <div className="col_content">
+                <p>HTML CSS JAVA CONCEPTION</p>
+              </div>
             </div>
           </div>
           <div className="skills_item">
             <div className="item_container first">
-              <div className="col_title">Tools</div>
-              <div className="col_content">SQLite Postgres Mongodb SQl</div>
+              <div className="col_title">
+                <p>Tools</p>
+              </div>
+              <div className="col_content">
+                <p>SQLite Postgres Mongodb SQl</p>
+              </div>
             </div>
             <div className="item_container second">
-              <div className="col_title">Frameworks</div>
-              <div className="col_content">HTML CSS JAVA CONCEPTION</div>
+              <div className="col_title">
+                <p>Frameworks</p>
+              </div>
+              <div className="col_content">
+                <p>HTML CSS JAVA CONCEPTION</p>
+              </div>
             </div>
           </div>
         </div>

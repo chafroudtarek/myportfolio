@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="skills_container">
+    <section className="skills_container">
       <div className="extra-header">
         <div className="info-header">
           <div className="title">
@@ -14,27 +14,47 @@ const Skills = () => {
       </div>
       <div className="skills_container_info">
         <div className="table_container">
-          <div className="title_part">Languages</div>
-          <div className="body_part">TypeScript JavaScript</div>
+          <div className="title_part">
+            <p>Languages</p>
+          </div>
+          <div className="body_part">
+            <p>TypeScript JavaScript</p>
+          </div>
         </div>
         <div className="table_container">
-          <div className="title_part">Databases</div>
-          <div className="body_part">SQLITE PostgreSQL Mongo</div>
+          <div className="title_part">
+            <p>Databases</p>
+          </div>
+          <div className="body_part">
+            <p>SQLITE PostgreSQL Mongo</p>
+          </div>
         </div>
         <div className="table_container">
-          <div className="title_part">Other</div>
-          <div className="body_part">HTML CSS EJS</div>
+          <div className="title_part">
+            <p>Other</p>
+          </div>
+          <div className="body_part">
+            <p>HTML CSS EJS</p>
+          </div>
         </div>
         <div className="table_container">
-          <div className="title_part">Tools</div>
-          <div className="body_part">Vscode Figma Linux Git Azure </div>
+          <div className="title_part">
+            <p>Tools</p>
+          </div>
+          <div className="body_part">
+            <p>Vscode Figma Linux Git Azure</p>{" "}
+          </div>
         </div>
         <div className="table_container">
-          <div className="title_part">Frameworks</div>
-          <div className="body_part">React Nestjs ExpressJs Angular</div>
+          <div className="title_part">
+            <p>Frameworks</p>
+          </div>
+          <div className="body_part">
+            <p>React Nestjs ExpressJs Angular</p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
