@@ -2,8 +2,9 @@ import Points from "../../../assets/icons/points.png";
 import Eunoia from "../../../assets/images/eunoia.jpg";
 import Sea from "../../../assets/images/sea.png";
 import Salone from "../../../assets/images/salone.png";
+import { useNavigate } from "react-router-dom";
 
-interface projectProps {
+export interface projectProps {
   tech: string;
   desc: string;
   img: string;
@@ -35,6 +36,7 @@ const projects: projectProps[] = [
 ];
 
 const Project = () => {
+  const navigate = useNavigate();
   return (
     <div className="projects_container">
       <img className="points" src={Points} alt="points" />
@@ -48,7 +50,13 @@ const Project = () => {
           <div className="line"></div>
         </div>
 
-        <div className="details">{"View all ~~>"} </div>
+        <div
+          className="details"
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/projects")}
+        >
+          {"View all ~~>"}{" "}
+        </div>
       </div>
       <div className="project_items">
         {projects.map((project: projectProps, index: number) => (
