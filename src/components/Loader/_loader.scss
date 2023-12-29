@@ -1,6 +1,7 @@
+@use "../../assets//styles/abstracts/mixins" as *;
+
 .glitch-wrapper {
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +18,12 @@
   letter-spacing: 5px;
   animation: shift 4s ease-in-out infinite alternate;
   z-index: 1;
+  @include mq(450px, max) {
+    font-size: 70px;
+  }
+  @include mq(340px, max) {
+    font-size: 50px;
+  }
 }
 
 .glitch:before {

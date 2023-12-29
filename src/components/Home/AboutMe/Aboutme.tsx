@@ -15,15 +15,17 @@ const Aboutme = () => {
         <div className="description">
           <p>Hello, i’m Tarek!</p>
           <p>
-            I’m a self-taught front-end developer based in Kyiv, Ukraine. I can
-            develop responsive websites from scratch and raise them into modern
-            user-friendly web experiences.{" "}
+            I am a proficient full-stack JavaScript developer based in Sousse,
+            Tunisia. Crafting responsive web applications is my expertise, and I
+            specialize in building seamless user experiences. Transforming
+            creativity into functional websites has been my passion for the past
+            year.
           </p>
           <p>
-            Transforming my creativity and knowledge into a websites has been my
-            passion for over a year. I have been helping various clients to
-            establish their presence online. I always strive to learn about the
-            newest technologies and frameworks.
+            I take pride in my ability to develop robust back-end
+            functionalities and intuitive front-end designs. I am dedicated to
+            staying updated with the latest technologies and frameworks,
+            ensuring that I deliver cutting-edge solutions.
           </p>
           <div>{"Read more ->"}</div>
         </div>

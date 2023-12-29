@@ -9,57 +9,32 @@ import Loader from "../Loader/Loader";
 import { StarField } from "../StarryBackground/StarryBackground";
 
 export const UnsplashScreen = () => {
-  const [displayText, setDisplayText] = useState(false);
   const [move, setMove] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  const [playSound] = useSound(typeWriter);
-  const [play] = useSound(Boom);
   const navigate = useNavigate();
-  // playSound();
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-      setDisplayText(true);
-    }, 5000);
-    // setTimeout(() => {
-    //   stop();
-    // }, 10000);
-  });
+  const [play] = useSound(Boom);
 
-  if (loading) {
-    return (
-      <>
-        <StarField numStars={300} /> <Loader />
-      </>
-    );
-  }
   if (move) {
     return <SpaceScreen />;
   }
   return (
     <div className="full_container">
       <StarField numStars={300} />
-      {displayText && (
-        <>
-          <div className="typewriter">
-            <h1>Welcome, heroes! Dive into my world 🎧</h1>
-          </div>
-          <div
-            className="button"
-            onClick={() => {
-              play();
-              setMove(true);
-              setTimeout(() => {
-                navigate("/home");
-              }, 3000);
-            }}
-          >
-            {" "}
-            let's explore
-          </div>
-        </>
-      )}
+      <>
+        <Loader />
+        <div
+          className="button"
+          onClick={() => {
+            play();
+            setMove(true);
+            setTimeout(() => {
+              navigate("/home");
+            }, 3000);
+          }}
+        >
+          {" "}
+          let's explore
+        </div>
+      </>
     </div>
   );
 };

@@ -53,7 +53,7 @@ const Skills = () => {
                 <p>Other</p>
               </div>
               <div className="col_content">
-                <p>HTML CSS JAVA CONCEPTION</p>
+                <p>Html Css Nodejs Git Jira Clickup Problem-solving </p>
               </div>
             </div>
           </div>
@@ -63,15 +63,15 @@ const Skills = () => {
                 <p>Tools</p>
               </div>
               <div className="col_content">
-                <p>SQLite Postgres Mongodb SQl</p>
+                <p>Grafana Prometheus Docker Jenkins Vscode</p>
               </div>
             </div>
             <div className="item_container second">
               <div className="col_title">
-                <p>Frameworks</p>
+                <p>Frameworks & library</p>
               </div>
               <div className="col_content">
-                <p>HTML CSS JAVA CONCEPTION</p>
+                <p>Reactjs Nestjs Expressjs Angular Nextjs</p>
               </div>
             </div>
           </div>

@@ -1,4 +1,9 @@
 import Shape from "../../../assets/icons/shape.png";
+
+
+
+
+
 const Small = () => {
   return (
     <div className="small_container">

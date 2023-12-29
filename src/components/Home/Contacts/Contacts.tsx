@@ -13,8 +13,8 @@ const Contacts = () => {
         </div>
         <div className="main_part">
           <p>
-            I’m interested in freelance opportunities. However, if you have
-            other request or question, don’t hesitate to contact me
+            If you have any inquiries or if there's something specific on your
+            mind, I'd love to hear from you. Feel free to reach out.
           </p>
           <div className="details_container">
             <span>Message me here</span>

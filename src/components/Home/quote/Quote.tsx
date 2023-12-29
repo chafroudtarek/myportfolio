@@ -4,7 +4,7 @@ const Quote = () => {
   return (
     <div className="quote_container">
       <div className="phrase_container">
-        <span>With great power comes great electricity bill</span>
+        <span>With great coding skills comes exceptional software.</span>
         <img src={QuoteIcon} alt="quote" className="top_part" />
         <img src={QuoteIcon} alt="quote" className="bottom_part" />
         <div className="author_container">
