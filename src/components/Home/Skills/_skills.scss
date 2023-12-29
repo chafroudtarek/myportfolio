@@ -1,7 +1,7 @@
 @use "../../../assets//styles/abstracts/mixins" as *;
 
 .skills_container {
-    width: 80%;
+  width: 80%;
   margin: 9rem auto;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,9 @@
     .line {
       border: 0.5px solid var(--primary, #0ea4f8);
       width: 20rem;
+      @include mq(400px, max) {
+        display: none;
+      }
     }
   }
   .main_part {

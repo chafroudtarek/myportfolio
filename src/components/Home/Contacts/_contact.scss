@@ -28,6 +28,9 @@
       .line {
         border: 0.5px solid var(--primary, #0ea4f8);
         width: 15rem;
+        @include mq(400px, max) {
+          display: none;
+        }
       }
     }
     .main_part {
