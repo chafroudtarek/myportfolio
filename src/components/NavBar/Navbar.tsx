@@ -28,13 +28,25 @@ const Navbar = () => {
           >
             <span>#</span>home
           </NavLink>
-          <NavLink to="/projects" className="link" onClick={playEnter as any}>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? "activeLink" : "link")}
+            onClick={playEnter as any}
+          >
             <span>#</span>works
           </NavLink>
-          <NavLink to="/about" className="link" onClick={playEnter as any}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "activeLink" : "link")}
+            onClick={playEnter as any}
+          >
             <span>#</span>about me{" "}
           </NavLink>
-          <NavLink to="/contact" className="link" onClick={playEnter as any}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "activeLink" : "link")}
+            onClick={playEnter as any}
+          >
             <span>#</span>contacts
           </NavLink>
         </ul>
@@ -52,35 +64,27 @@ const Navbar = () => {
           <span>hafroud</span>
         </div>
         <ul>
-          <NavLink
-            className={({ isActive }) => (isActive ? "link" : "activeLink")}
-            to="/"
-          >
+          <NavLink className="link" to="/home">
             <span>#</span>home
           </NavLink>
-          <NavLink
-            to="/works"
-            className={({ isActive }) => (isActive ? "link" : "activeLink")}
-          >
+          <NavLink to="/projects" className="link">
             <span>#</span>works
           </NavLink>
-          <NavLink
-            to="/aboutme"
-            className={({ isActive }) => (isActive ? "link" : "activeLink")}
-          >
+          <NavLink to="/about" className="link">
             <span>#</span>about me{" "}
           </NavLink>
-          <NavLink
-            to="contacts"
-            className={({ isActive }) => (isActive ? "link" : "activeLink")}
-          >
+          <NavLink to="/contact" className="link">
             <span>#</span>contacts
           </NavLink>
         </ul>
         <div className="socialmedia">
-          <img src={Linkedin} alt="linkedin" />
+          <a href="https://www.linkedin.com/in/tarek-chafroud-6725711bb/">
+            <img src={Linkedin} alt="linkedin" />
+          </a>
           <img src={Email} alt="email" />
-          <img src={Github} alt="github" />
+          <a href="https://github.com/chafroudtarek">
+            <img src={Github} alt="github" />
+          </a>
         </div>
       </div>
     </>

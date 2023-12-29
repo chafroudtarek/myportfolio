@@ -24,9 +24,13 @@ const Footer = () => {
           <div className="left_part">
             <span>Media</span>
             <div className="media_items">
-              <img src={Linkedin} alt="linkedin" />
+              <a href="https://www.linkedin.com/in/tarek-chafroud-6725711bb/">
+                <img src={Linkedin} alt="linkedin" />
+              </a>
               <img src={Email} height={30} alt="linkedin" />
-              <img src={Github} height={35} alt="linkedin" />
+              <a href="https://github.com/chafroudtarek">
+                <img src={Github} height={35} alt="linkedin" />
+              </a>
             </div>
           </div>
         </div>
