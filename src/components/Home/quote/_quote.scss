@@ -20,6 +20,9 @@
       @include mq(500px, max) {
         font-size: 11px;
       }
+      @include mq(400px, max) {
+        font-size: 9px;
+      }
     }
     .top_part {
       position: absolute;

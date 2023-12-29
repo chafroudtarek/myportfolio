@@ -1,5 +1,4 @@
-import Avatar from "../../../assets/images/hero.png";
-
+import Avatar from "../../../assets/images/hero2.png"
 const Main = () => {
   return (
     <section className="main_container">

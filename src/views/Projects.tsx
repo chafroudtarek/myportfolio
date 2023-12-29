@@ -13,7 +13,7 @@ import useSound from "use-sound";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  const [playSound] = useSound(ThunderStorm,{});
+  const [playSound] = useSound(ThunderStorm, {});
   const warpVariants = {
     initial: { scale: 0.5, opacity: 0 },
     animate: {
@@ -36,9 +36,13 @@ const Projects = () => {
 
         <div className="side_items">
           <div className="side_line"></div>
-          <img src={Linkedin} alt="linkedin" height={"23px"} />
+          <a href="https://www.linkedin.com/in/tarek-chafroud-6725711bb/">
+            <img src={Linkedin} alt="linkedin" height={"23px"} />
+          </a>
           <img src={Email} alt="email" height={"20px"} />
-          <img src={Github} alt="github" height={"25px"} />
+          <a href="https://github.com/chafroudtarek">
+            <img src={Github} alt="github" height={"25px"} />
+          </a>
         </div>
 
         <Navbar />

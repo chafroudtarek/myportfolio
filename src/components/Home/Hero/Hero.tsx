@@ -1,5 +1,5 @@
 import HeroImg from "../../../assets/images/hero.png";
-
+import Mycv from "../../../assets/cvtarekchafroud.pdf";
 const Hero = () => {
   return (
     <section className="hero_container">
@@ -9,7 +9,7 @@ const Hero = () => {
           <span>Content creator</span>
         </h3>
         <p>I craft responsive websites where technology meets creativity.</p>
-        <a className="dow_button" href="HeroImg" download="cvtarekchafroud.pdf">
+        <a className="dow_button" href={Mycv} download="cvtarekchafroud.pdf">
           Download my cv
         </a>
       </div>
@@ -17,7 +17,7 @@ const Hero = () => {
         <img src={HeroImg} alt="heroimg" />
         <span className="currentwork">
           <div></div>
-          currently working on softylines
+          Follow my blogs posts on Dev.to.
         </span>
       </div>
     </section>

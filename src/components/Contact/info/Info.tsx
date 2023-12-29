@@ -51,20 +51,31 @@ const Info = () => {
           <div className="line"></div>
         </div>
         <div className="media_item_container">
-          <div className="item">
-            <img src={Linkedin} alt="linkedin" /> <span>tarek chafourd</span>
-          </div>
-          <div className="item">
-            <img src={Facebook} alt="linkedin" height={25} />{" "}
-            <span>tarek chafourd</span>
-          </div>
-          <div className="item">
-            <img src={Instgram} alt="linkedin" height={25} />{" "}
-            <span>tarek chafourd</span>
-          </div>
-          <div className="item">
-            <img src={Twitter} alt="linkedin" /> <span>tarek chafourd</span>
-          </div>
+          <a href="https://www.linkedin.com/in/tarek-chafroud-6725711bb/">
+            <div className="item" style={{ cursor: "pointer" }}>
+              <img src={Linkedin} alt="linkedin" /> <span>tarek chafroud</span>
+            </div>
+          </a>
+          <a href="https://www.facebook.com/tarek.chaf/">
+            <div className="item" style={{ cursor: "pointer" }}>
+              <img src={Facebook} alt="facebook" height={25} />{" "}
+              <span>chafourd tarek</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/chafroudtarek/">
+            <div className="item" style={{ cursor: "pointer" }}>
+              <img src={Instgram} alt="instgram" height={25} />{" "}
+              <span>tarek chafourd</span>
+            </div>
+          </a>
+          <a
+            href="https://twitter.com/tarekchafroud1"
+            style={{ cursor: "pointer" }}
+          >
+            <div className="item">
+              <img src={Twitter} alt="twitter" /> <span>chafourd tarek </span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
