@@ -26,7 +26,9 @@ const Info = () => {
         <div className="contact_tables">
           <div className="support">
             <h5>Support me here</h5>
-            <p>536346353774674</p>
+            <a href="https://www.linkedin.com/in/tarek-chafroud-6725711bb/?originalSubdomain=tn">
+              chafroudtarek
+            </a>
           </div>
           <div className="message">
             <h5>Message me here</h5>
