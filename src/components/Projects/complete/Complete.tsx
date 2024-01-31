@@ -33,7 +33,7 @@ const projects: projectProps[] = [
   },
   {
     title: "Migradata",
-    tech: "reactjs, nestjs, expressjs,postgres, docker, stapi",
+    tech: "reactjs, nestjs, expressjs,postgres, docker, strapi",
     img: Migrate,
     desc: "Created a MED-HIMS-aligned app for Tunisia's migration data, enhancing governance decisions.",
     location: "Tunisia 🇹🇳 ",
