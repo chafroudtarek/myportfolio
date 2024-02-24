@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <section className="skills_container">
+    <section className="skills_container" data-aos="fade-up">
       <div className="extra-header">
         <div className="info-header">
           <div className="title">
@@ -12,7 +12,11 @@ const Skills = () => {
           <div className="line"></div>
         </div>
       </div>
-      <div className="skills_container_info">
+      <div
+        className="skills_container_info"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <div className="table_container">
           <div className="title_part">
             <p>Languages</p>

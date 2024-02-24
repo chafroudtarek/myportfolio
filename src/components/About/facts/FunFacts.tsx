@@ -2,7 +2,7 @@ import Points from "../../../assets/icons/rectangleOfPoints.png";
 import Squares from "../../../assets/icons/bluesquares.png";
 const FunFacts = () => {
   return (
-    <section className="funfacts_container">
+    <section className="funfacts_container" data-aos="fade-up">
       <div className="extra-header">
         <div className="info-header">
           <div className="title">
@@ -12,7 +12,11 @@ const FunFacts = () => {
           <div className="line"></div>
         </div>
       </div>
-      <div className="funfacts_container_info">
+      <div
+        className="funfacts_container_info"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <div className="leftPart">
           <div className="quote">
             <p>

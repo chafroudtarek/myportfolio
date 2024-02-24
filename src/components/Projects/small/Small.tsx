@@ -41,7 +41,7 @@ const projects = [
 
 const Small = () => {
   return (
-    <div className="small_container">
+    <div className="small_container" data-aos="fade-up">
       <div className="extra-header">
         <div className="info-header">
           <div className="title">
@@ -76,7 +76,7 @@ export const SmallProjectItem = ({
   option,
 }: SmallProjectItemProps) => {
   return (
-    <div className="smallProjectItem">
+    <div className="smallProjectItem" data-aos="fade-right">
       <div className="title">
         {" "}
         <p>{tech}</p>
