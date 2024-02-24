@@ -49,7 +49,7 @@ const Home = () => {
 
         <ShootingStar />
         <Hero />
-        <Quote />
+        <Quote  />
         <Project />
 
         <Skills />

@@ -3,7 +3,7 @@ import Mycv from "../../../assets/cvtarekchafroud.pdf";
 const Hero = () => {
   return (
     <section className="hero_container">
-      <div className="left_part">
+      <div className="left_part" data-aos="fade-up">
         <h3>
           Tarek is a <span>Full stack developer</span> and a{" "}
           <span>Content creator</span>
@@ -13,7 +13,7 @@ const Hero = () => {
           Download my cv
         </a>
       </div>
-      <div className="hero_img_container">
+      <div className="hero_img_container" data-aos="fade-down">
         <img src={HeroImg} alt="heroimg" />
         <span className="currentwork">
           <div></div>

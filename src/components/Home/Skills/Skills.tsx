@@ -5,7 +5,7 @@ import Shape from "../../../assets/icons/shape.png";
 import ShootingStar from "../../ShootingStar/ShootingStar";
 const Skills = () => {
   return (
-    <div className="skills_container">
+    <div className="skills_container" data-aos="fade-up">
       <ShootingStar />
 
       <div className="skills-header">
@@ -16,7 +16,11 @@ const Skills = () => {
         <div className="line"></div>
       </div>
       <div className="main_part">
-        <div className="shapes">
+        <div
+          className="shapes"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <div className="top_part">
             <img src={Points} alt="points" />
             <img src={Rectangle} alt="rectangle" className="rectangle" />
@@ -27,7 +31,11 @@ const Skills = () => {
             <img src={Rectangle} alt="rectangle" height={"50px"} />
           </div>
         </div>
-        <div className="skills_items">
+        <div
+          className="skills_items"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
           <div>
             <div className="item_container">
               <div className="col_title">

@@ -7,8 +7,14 @@ import Aboutme from "./views/AboutMe";
 import Projects from "./views/Projects";
 import NotFound from "./components/notFound/NotFound";
 import { UnsplashScreen } from "./components/unsplash/UnsplashScreen";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 function App() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <Router>
       <ToastContainer />

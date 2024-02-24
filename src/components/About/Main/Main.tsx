@@ -1,7 +1,7 @@
-import Avatar from "../../../assets/images/hero2.png"
+import Avatar from "../../../assets/images/hero2.png";
 const Main = () => {
   return (
-    <section className="main_container">
+    <section className="main_container" data-aos="fade-up">
       <div className="extra-header">
         <div className="info-header">
           <div className="title">
@@ -14,7 +14,11 @@ const Main = () => {
       </div>
 
       <div className="main_container_info">
-        <div className="leftSide">
+        <div
+          className="leftSide"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <p>Hello, i’m Tarek!</p>
           <p>
             I am a proficient full-stack JavaScript developer based in Sousse,
@@ -33,7 +37,11 @@ const Main = () => {
             tackle challenges and bring innovation to full-stack development.
           </p>
         </div>
-        <div className="rightSide">
+        <div
+          className="rightSide"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
           <img src={Avatar} alt="hero" />
         </div>
       </div>

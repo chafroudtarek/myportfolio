@@ -38,7 +38,7 @@ const projects: projectProps[] = [
 const Project = () => {
   const navigate = useNavigate();
   return (
-    <div className="projects_container">
+    <div className="projects_container" data-aos="fade-up">
       <img className="points" src={Points} alt="points" />
       <div className="square"></div>
       <div className="header_part">
@@ -83,7 +83,12 @@ export const ProjectItem = ({
   location,
 }: projectProps) => {
   return (
-    <div className="project_container">
+    <div
+      className="project_container"
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+    >
       <div className="img_container">
         <img src={img} alt="image" />
       </div>

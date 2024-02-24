@@ -2,7 +2,7 @@ import Email from "../../../assets/icons/gmail.png";
 import Linkedin from "../../../assets/icons/Linkedin.svg";
 const Contacts = () => {
   return (
-    <div className="contact_container">
+    <div className="contact_container" data-aos="fade-up">
       <div className="contact_body">
         <div className="contact-header">
           <div className="title">
