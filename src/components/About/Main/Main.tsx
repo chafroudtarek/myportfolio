@@ -1,4 +1,4 @@
-import Avatar from "../../../assets/images/hero2.png";
+import Avatar from "../../../assets/images/hero.png";
 const Main = () => {
   return (
     <section className="main_container" data-aos="fade-up">
