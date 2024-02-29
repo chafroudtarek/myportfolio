@@ -88,3 +88,25 @@
     }
   }
 }
+.rightSide {
+  img {
+    height: 420px;
+    width: 420px;
+    @include mq(1200px, max) {
+      height: 320px;
+      width: 320px;
+    }
+    @include mq(1000px, max) {
+      height: 220px;
+      width: 220px;
+    }
+    @include mq(700px, max) {
+      height: 320px;
+      width: 320px;
+    }
+    @include mq(400px, max) {
+      height: 280px;
+      width: 280px;
+    }
+  }
+}

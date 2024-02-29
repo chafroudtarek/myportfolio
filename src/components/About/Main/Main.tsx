@@ -1,4 +1,4 @@
-import Avatar from "../../../assets/images/hero2.png";
+import Avatar from "../../../assets/images/hero.png";
 const Main = () => {
   return (
     <section className="main_container" data-aos="fade-up">
@@ -42,7 +42,7 @@ const Main = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <img src={Avatar} alt="hero" />
+          <img src={Avatar} alt="hero"  />
         </div>
       </div>
     </section>
