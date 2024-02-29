@@ -42,7 +42,7 @@ const Main = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <img src={Avatar} alt="hero" />
+          <img src={Avatar} alt="hero"  />
         </div>
       </div>
     </section>
